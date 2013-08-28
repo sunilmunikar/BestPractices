@@ -16,5 +16,10 @@ namespace Core.Controllers
             return View();
         }
 
+        public JsonResult Result()
+        {
+            return new JsonResult();
+        }
+
     }
 }
