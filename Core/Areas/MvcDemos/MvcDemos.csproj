@@ -120,6 +120,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Migrations\201309081142366_InitialCreate.cs" />
+    <Compile Include="Migrations\201309081142366_InitialCreate.Designer.cs">
+      <DependentUpon>201309081142366_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309081230043_GenereNameRequired.cs" />
+    <Compile Include="Migrations\201309081230043_GenereNameRequired.Designer.cs">
+      <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -170,6 +179,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201309081142366_InitialCreate.resx">
+      <DependentUpon>201309081142366_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309081230043_GenereNameRequired.resx">
+      <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
