@@ -1,4 +1,5 @@
-﻿namespace MvcDemos.Models
+﻿using System.Web.Mvc;
+namespace MvcDemos.Models
 {
     public class Artist
     {

@@ -13,6 +13,11 @@ namespace MvcDemos.Controllers
     {
         private MusicStoreEntities db = new MusicStoreEntities();
 
+        public StoreController()
+        {
+            HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+        }
+
         //
         // GET: /Store/
 
@@ -21,25 +26,9 @@ namespace MvcDemos.Controllers
             return View(db.Genres.ToList());
         }
 
-        //
-        // GET: /Store/Details/5
-
-        public ActionResult Details(int id = 0)
+        public PartialViewResult CreatePartial()
         {
-            Genre genre = db.Genres.Find(id);
-            if (genre == null)
-            {
-                return HttpNotFound();
-            }
-            return View(genre);
-        }
-
-        //
-        // GET: /Store/Create
-
-        public ActionResult Create()
-        {
-            return View();
+            return PartialView("_Create");
         }
 
         //
@@ -53,10 +42,10 @@ namespace MvcDemos.Controllers
             {
                 db.Genres.Add(genre);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return PartialView("Thanks");
             }
 
-            return View(genre);
+            return PartialView("_Create", genre);
         }
 
         //
@@ -69,7 +58,7 @@ namespace MvcDemos.Controllers
             {
                 return HttpNotFound();
             }
-            return View(genre);
+            return PartialView("_Create", genre);
         }
 
         //
@@ -83,22 +72,9 @@ namespace MvcDemos.Controllers
             {
                 db.Entry(genre).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return PartialView("Thanks");
             }
-            return View(genre);
-        }
-
-        //
-        // GET: /Store/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Genre genre = db.Genres.Find(id);
-            if (genre == null)
-            {
-                return HttpNotFound();
-            }
-            return View(genre);
+            return PartialView("_Create", genre);
         }
 
         //

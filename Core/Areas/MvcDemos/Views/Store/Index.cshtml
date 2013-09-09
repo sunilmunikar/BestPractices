@@ -20,20 +20,68 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GenreId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GenreId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GenreId })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GenreId }, new { @class="editLink", data_id=@item.GenreId} ) |
+            @Html.ActionLink("Details", "Details", new { id = item.GenreId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.GenreId })
+            </td>
+        </tr>
+    }
 </table>
+
+
+<script>
+    $(document).ready(function () {
+        $("#dialog-form").dialog({
+            autoOpen: false,
+            modal: true
+        });
+
+        //$("#create-user")
+        //    .button()
+        //    .click(function () {
+        //        $("#dialog-form").dialog("open");
+        //    });
+
+        $("#create-user")
+            .button()
+            .click(function () {
+                $("#dialog-form")
+                    .html("")
+                    .dialog("option", "title", "Create")
+                    .load("/Store/CreatePartial", function () {
+                        $("#dialog-form").dialog("open");
+                    });
+            });
+
+        $('.editLink')
+        .click(function (e) {
+            e.preventDefault();
+            var id = $(this).data("id");
+            $("#dialog-form")
+            .html("")
+            .dialog("option", "title", "Edit")
+            .load("/Store/Edit/" + id, function () {
+                $("#dialog-form").dialog("open");
+            });
+        });
+
+    });
+</script>
+
+<h2>Parent page</h2>
+
+<button id="create-user">Create new user</button>
+
+<div id="dialog-form" title="Create new user">
+    @*@{ Html.RenderPartial("_nothing", MvcDemos.Models.Genre); }*@
+</div>
