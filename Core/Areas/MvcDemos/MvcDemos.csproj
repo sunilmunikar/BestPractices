@@ -132,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Resources\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
     <Compile Include="Samples\AjaxForm\AccountController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Migrations\201309081142366_InitialCreate.cs" />
@@ -590,6 +596,12 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Resources.js" />
+    <Content Include="Scripts\ResourcesGenerator.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourcesGenerator.tt</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -604,6 +616,11 @@
     <Content Include="Views\AjaxForm\Thanks.cshtml" />
     <Content Include="Views\AjaxForm\_Create.cshtml" />
     <Content Include="Views\Store\Thanks.cshtml" />
+    <Content Include="Scripts\ResourcesGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ResourcesGenerator.js</LastGenOutput>
+    </Content>
+    <Content Include="Views\Resources\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -621,9 +638,17 @@
     <EmbeddedResource Include="Migrations\201309081230043_GenereNameRequired.resx">
       <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common.nl.resx" />
+    <EmbeddedResource Include="Resources\Common.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
