@@ -1,4 +1,5 @@
-﻿using FluentSecurity;
+﻿using System.Linq;
+using FluentSecurity;
 using FluentSecurity.Policy;
 using FluentsecurityDemo;
 using FluentsecurityDemo.Controllers;
@@ -28,7 +29,11 @@ namespace UnitTests.FluentsecurityDemo
 
             var results = SecurityConfiguration.Current.Verify(expectations =>
             {
-                expectations.Expect<AccountController>(x => x.ChangePassword()).Has<RequireAllRolesPolicy>();
+                expectations.Expect<AccountController>(x => x.ChangePassword())
+                    .Has<RequireAnyRolePolicy>(
+                    p => p.RolesRequired.Contains("Administrator") &&
+                    p.RolesRequired.Count() == 1);
+
             });
 
             Assert.True(results.Valid());
