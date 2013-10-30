@@ -41,18 +41,6 @@ namespace FluentsecurityDemo
             // Use LocalDB for Entity Framework by default
             Database.DefaultConnectionFactory = new SqlConnectionFactory(@"Data Source=(localdb)\v11.0; Integrated Security=True; MultipleActiveResultSets=True");
 
-            SecurityConfigurator.Configure(configuration =>
-            {
-                // Tell FluentSecurity where to obtain the user authentication status from
-                configuration.GetAuthenticationStatusFrom(() =>
-                    HttpContext.Current.User.Identity.IsAuthenticated);
-
-                configuration.For<HomeController>().Ignore();
-
-                // Make sure that users can still log on
-                configuration.For<AccountController>(ac => ac.LogOn()).Ignore();
-                configuration.For<AccountController>(ac => ac.ChangePassword()).RequireRole("Administrator");
-            });
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
