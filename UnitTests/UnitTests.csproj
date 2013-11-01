@@ -44,6 +44,9 @@
     <Reference Include="FluentSecurity.TestHelper">
       <HintPath>..\packages\FluentSecurity.TestHelper.2.0.0\lib\net40\FluentSecurity.TestHelper.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -94,19 +97,22 @@
     <Compile Include="FluentsecurityDemo\FluentsecurityTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlEnumHelperTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlHelper.cs" />
+    <Compile Include="MvcDemos\Validator\GenreValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MvcDemos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Core\Areas\FluentsecurityDemo\FluentsecurityDemo.csproj">
       <Project>{750d4875-8d57-41b7-ac21-58c7a27ce284}</Project>
       <Name>FluentsecurityDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Areas\MvcDemos\MvcDemos.csproj">
+      <Project>{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}</Project>
+      <Name>MvcDemos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

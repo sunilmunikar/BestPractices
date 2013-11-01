@@ -8,7 +8,7 @@ using FluentSecurity.TestHelper;
 
 namespace UnitTests.FluentsecurityDemo
 {
-    class FluentsecurityTests
+    public class FluentsecurityTests
     {
         [Fact]
         public void FactMethodName()
