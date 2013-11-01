@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentsecurityDemo", "src\F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDemos", "src\MvcDemos\MvcDemos.csproj", "{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{031ED841-BF0D-46D0-B56F-114E64C0E9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031ED841-BF0D-46D0-B56F-114E64C0E9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031ED841-BF0D-46D0-B56F-114E64C0E9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031ED841-BF0D-46D0-B56F-114E64C0E9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031ED841-BF0D-46D0-B56F-114E64C0E9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
