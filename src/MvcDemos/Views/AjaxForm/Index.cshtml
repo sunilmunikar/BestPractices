@@ -1,0 +1,25 @@
+﻿@model MvcDemos.Models.Account
+@{
+    ViewBag.Title = "Create";
+}
+
+<script>
+    $(function () {
+        $("#dialog-form").dialog();
+
+        $("#create-user")
+      .button()
+      .click(function () {
+          $("#dialog-form").dialog("open");
+      });
+
+    });
+</script>
+
+<h2>Parent page</h2>
+
+<button id="create-user">Create new user</button>
+
+<div id="dialog-form" title="Create new user" >
+    @{ Html.RenderPartial("_Create"); }
+</div>
