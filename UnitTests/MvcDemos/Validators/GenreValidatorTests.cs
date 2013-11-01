@@ -1,10 +1,10 @@
 ﻿using FluentValidation.TestHelper;
-using MvcDemos.Validator;
+using MvcDemos.Validators;
 using MvcDemos.ViewModels;
 using Ploeh.AutoFixture;
 using Xunit;
 
-namespace UnitTests.MvcDemos.Validator
+namespace UnitTests.MvcDemos.Validators
 {
     public class GenreValidatorTests
     {
@@ -21,8 +21,9 @@ namespace UnitTests.MvcDemos.Validator
         public void NameIsNull_ReturnsError()
         {
             var editModel = _fixtue.Build<GenreEditModel>()
-                .With(x => x.Name, null)
-                .Create();
+                                   .With(x => x.Name, null)
+                                   .Create();
+
             _validator.ShouldHaveValidationErrorFor(x => x.Name, editModel);
         }
 

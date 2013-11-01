@@ -97,7 +97,7 @@
     <Compile Include="FluentsecurityDemo\FluentsecurityTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlEnumHelperTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlHelper.cs" />
-    <Compile Include="MvcDemos\Validator\GenreValidatorTests.cs" />
+    <Compile Include="MvcDemos\Validators\GenreValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
