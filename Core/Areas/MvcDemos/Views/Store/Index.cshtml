@@ -52,7 +52,7 @@
         //        $("#dialog-form").dialog("open");
         //    });
 
-        $("#create-user")
+        $("#create")
             .button()
             .click(function () {
                 $("#dialog-form")
@@ -80,7 +80,7 @@
 
 <h2>Parent page</h2>
 
-<button id="create-user">Create new user</button>
+<button id="create">Create</button>
 
 <div id="dialog-form" title="Create new user">
     @*@{ Html.RenderPartial("_nothing", MvcDemos.Models.Genre); }*@

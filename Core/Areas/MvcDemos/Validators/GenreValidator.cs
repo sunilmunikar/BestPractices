@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using MvcDemos.ViewModels;
 
-namespace MvcDemos.Validator
+namespace MvcDemos.Validators
 {
     public class GenreValidator : AbstractValidator<GenreEditModel>
     {
