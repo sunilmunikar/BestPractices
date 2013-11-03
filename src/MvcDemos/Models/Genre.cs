@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using GenericRepository;
 
 namespace MvcDemos.Models
 {
-    public partial class Genre
+    public class Genre : IEntity
     {
-        public int GenreId { get; set; }
-        [Required]
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public List<Album> Albums { get; set; }

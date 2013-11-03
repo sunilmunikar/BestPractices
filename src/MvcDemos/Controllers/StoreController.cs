@@ -1,25 +1,32 @@
 ﻿using System.Data;
 using System.Linq;
 using System.Web.Mvc;
+using GenericRepository.EntityFramework;
 using MvcDemos.Models;
 
 namespace MvcDemos.Controllers
 {
     public class StoreController : Controller
     {
-        private MusicStoreEntities db = new MusicStoreEntities();
+        //private MusicStoreEntities db = new MusicStoreEntities();
+        private readonly IGenreService _genreService;
 
         public StoreController()
+            : this(new GenreService(new EntityRepository<Genre>(new MusicStoreEntities())))
         {
             HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
         }
 
-        //
-        // GET: /Store/
+        public StoreController(IGenreService genreService)
+        {
+            _genreService = genreService;
+        }
 
         public ActionResult Index()
         {
-            return View(db.Genres.ToList());
+            //var genres = db.Genres.ToList();
+            var genres = _genreService.GetGenres();
+            return View(genres);
         }
 
         public PartialViewResult CreatePartial()
@@ -27,29 +34,26 @@ namespace MvcDemos.Controllers
             return PartialView("_Create");
         }
 
-        //
-        // POST: /Store/Create
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Genre genre)
         {
             if (ModelState.IsValid)
             {
-                db.Genres.Add(genre);
-                db.SaveChanges();
+                _genreService.Add(genre);
+
                 return PartialView("Thanks");
             }
 
             return PartialView("_Create", genre);
         }
 
-        //
-        // GET: /Store/Edit/5
+        ////
+        //// GET: /Store/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            Genre genre = db.Genres.Find(id);
+            Genre genre = _genreService.GetGenre(id);
             if (genre == null)
             {
                 return HttpNotFound();
@@ -57,39 +61,39 @@ namespace MvcDemos.Controllers
             return PartialView("_Create", genre);
         }
 
-        //
-        // POST: /Store/Edit/5
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Genre genre)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(genre).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(genre).State = EntityState.Modified;
+                //db.SaveChanges();
+                _genreService.Update(genre);
+
                 return PartialView("Thanks");
             }
             return PartialView("_Create", genre);
         }
 
-        //
-        // POST: /Store/Delete/5
+        ////
+        //// POST: /Store/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Genre genre = db.Genres.Find(id);
-            db.Genres.Remove(genre);
-            db.SaveChanges();
+            //Genre genre = db.Genres.Find(id);
+            //db.Genres.Remove(genre);
+            //db.SaveChanges();
+            _genreService.Delete(id);
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    db.Dispose();
+        //    base.Dispose(disposing);
+        //}
     }
 }
