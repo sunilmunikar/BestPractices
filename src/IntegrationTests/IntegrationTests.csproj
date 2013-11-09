@@ -83,7 +83,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\MvcDemos\MvcDemos.csproj">
+    <ProjectReference Include="..\MvcDemos\MvcDemos.csproj">
       <Project>{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}</Project>
       <Name>MvcDemos</Name>
     </ProjectReference>

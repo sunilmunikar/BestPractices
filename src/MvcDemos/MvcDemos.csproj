@@ -637,7 +637,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Core.csproj">
+    <ProjectReference Include="..\Core\Core.csproj">
       <Project>{031ED841-BF0D-46D0-B56F-114E64C0E9B0}</Project>
       <Name>Core</Name>
     </ProjectReference>

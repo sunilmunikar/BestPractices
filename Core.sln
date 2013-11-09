@@ -10,19 +10,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC6219
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.Framework", "My.Framework\My.Framework.csproj", "{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{9951DAAE-3F8D-4134-972E-EF20C7728CD4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentsecurityDemo", "src\FluentsecurityDemo\FluentsecurityDemo.csproj", "{750D4875-8D57-41B7-AC21-58C7A27CE284}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDemos", "src\MvcDemos\MvcDemos.csproj", "{1FB62063-D359-420F-9C5A-A4E7A46AB1A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{031ED841-BF0D-46D0-B56F-114E64C0E9B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D9265313-B202-4602-B36C-F77F60D8839D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{031ED841-BF0D-46D0-B56F-114E64C0E9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "src\UnitTests\UnitTests.csproj", "{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "src\IntegrationTests\IntegrationTests.csproj", "{9951DAAE-3F8D-4134-972E-EF20C7728CD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,14 +34,6 @@ Global
 		{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{750D4875-8D57-41B7-AC21-58C7A27CE284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{750D4875-8D57-41B7-AC21-58C7A27CE284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750D4875-8D57-41B7-AC21-58C7A27CE284}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,6 +50,14 @@ Global
 		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62DB32EF-35CA-464D-B7A5-DB3B2310EC31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9951DAAE-3F8D-4134-972E-EF20C7728CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

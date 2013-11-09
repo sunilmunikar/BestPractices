@@ -125,11 +125,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\FluentsecurityDemo\FluentsecurityDemo.csproj">
+    <ProjectReference Include="..\FluentsecurityDemo\FluentsecurityDemo.csproj">
       <Project>{750d4875-8d57-41b7-ac21-58c7a27ce284}</Project>
       <Name>FluentsecurityDemo</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\MvcDemos\MvcDemos.csproj">
+    <ProjectReference Include="..\MvcDemos\MvcDemos.csproj">
       <Project>{1fb62063-d359-420f-9c5a-a4e7a46ab1a3}</Project>
       <Name>MvcDemos</Name>
     </ProjectReference>
