@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using GenericRepository;
 
-namespace MvcDemos.Models
+namespace Core.Entities
 {
-    public class Cart
+    public class Cart : IEntity
     {
-        [Key]
+        public int Id { get; set; }
+        //[Key]
         public int RecordId { get; set; }
         public string CartId { get; set; }
         public int AlbumId { get; set; }

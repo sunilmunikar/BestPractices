@@ -1,4 +1,4 @@
-﻿namespace MvcDemos.Models
+﻿namespace Core.Entities
 {
     public class OrderDetail
     {

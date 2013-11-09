@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using MvcDemos.Models;
+using Core.Entities;
 
 namespace MvcDemos.Controllers
 {

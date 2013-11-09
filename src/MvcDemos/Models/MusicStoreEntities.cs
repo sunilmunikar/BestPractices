@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Core.Entities;
 using GenericRepository.EntityFramework;
 
 namespace MvcDemos.Models

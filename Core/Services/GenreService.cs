@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
-using System.Web.Http;
+using Core.Entities;
 using GenericRepository.EntityFramework;
-using MvcDemos.Models;
 
 namespace MvcDemos.Controllers
 {

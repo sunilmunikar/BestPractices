@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using GenericRepository;
 
-namespace MvcDemos.Models
+namespace Core.Entities
 {
     public class Genre : IEntity
     {
