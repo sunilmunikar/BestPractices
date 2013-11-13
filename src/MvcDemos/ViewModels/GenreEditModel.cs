@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using FluentValidation.Attributes;
+﻿using FluentValidation.Attributes;
 using MvcDemos.Validators;
+using System.ComponentModel.DataAnnotations;
 
 namespace MvcDemos.ViewModels
 {

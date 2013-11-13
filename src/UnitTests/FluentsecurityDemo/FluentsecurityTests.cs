@@ -1,10 +1,10 @@
-﻿using System.Linq;
-using FluentSecurity;
+﻿using FluentSecurity;
 using FluentSecurity.Policy;
+using FluentSecurity.TestHelper;
 using FluentsecurityDemo;
 using FluentsecurityDemo.Controllers;
+using System.Linq;
 using Xunit;
-using FluentSecurity.TestHelper;
 
 namespace UnitTests.FluentsecurityDemo
 {

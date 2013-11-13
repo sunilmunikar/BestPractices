@@ -1,6 +1,6 @@
-﻿using System.Web;
-using FluentSecurity;
+﻿using FluentSecurity;
 using FluentsecurityDemo.Controllers;
+using System.Web;
 
 namespace FluentsecurityDemo
 {

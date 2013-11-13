@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using Core.Entities;
+﻿using Core.Entities;
 using GenericRepository.EntityFramework;
+using System.Collections.Generic;
 
-namespace MvcDemos.Controllers
+namespace Core.Services
 {
     public class GenreService : IGenreService
     {
@@ -38,8 +37,8 @@ namespace MvcDemos.Controllers
         public void Delete(int id)
         {
             Genre genre = _genreRepository.GetSingle(id);
-            if(genre == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+            //if(genre == null)
+            //    throw new HttpResponseException(HttpStatusCode.NotFound);
             _genreRepository.Delete(genre);
             _genreRepository.Save();
         }

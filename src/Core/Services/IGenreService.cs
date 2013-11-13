@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Core.Entities;
+﻿using Core.Entities;
+using System.Collections.Generic;
 
-namespace MvcDemos.Controllers
+namespace Core.Services
 {
     public interface IGenreService
     {

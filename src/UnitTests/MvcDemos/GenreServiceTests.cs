@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Core.Entities;
+using Core.Services;
 using FakeItEasy;
 using FluentAssertions;
 using GenericRepository.EntityFramework;
-using MvcDemos.Controllers;
-using MvcDemos.Models;
+using System.Collections.Generic;
 using Xunit;
 
 namespace UnitTests.MvcDemos

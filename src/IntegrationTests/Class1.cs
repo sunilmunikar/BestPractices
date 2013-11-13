@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MvcDemos.Models;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using MvcDemos.Models;
 using Xunit;
 
 namespace IntegrationTests

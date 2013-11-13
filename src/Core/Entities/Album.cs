@@ -1,6 +1,6 @@
-﻿using System.ComponentModel;
+﻿using GenericRepository;
 using System.Collections.Generic;
-using GenericRepository;
+using System.ComponentModel;
 
 namespace Core.Entities
 {

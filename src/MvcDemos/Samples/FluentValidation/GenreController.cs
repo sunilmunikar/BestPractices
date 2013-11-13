@@ -1,5 +1,5 @@
-﻿using System.Web.Mvc;
-using MvcDemos.ViewModels;
+﻿using MvcDemos.ViewModels;
+using System.Web.Mvc;
 
 namespace MvcDemos.Samples.FluentValidation
 {

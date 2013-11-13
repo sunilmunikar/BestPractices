@@ -1,8 +1,8 @@
-﻿using System.Data;
-using System.Linq;
-using System.Web.Mvc;
+﻿using Core.Entities;
+using Core.Services;
 using GenericRepository.EntityFramework;
 using MvcDemos.Models;
+using System.Web.Mvc;
 
 namespace MvcDemos.Controllers
 {

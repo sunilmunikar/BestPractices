@@ -7,7 +7,6 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
-using FakeItEasy;
 using Xunit;
 
 namespace UnitTests.Framework.Mvc.HtmlHelper
