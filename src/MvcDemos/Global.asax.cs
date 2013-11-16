@@ -21,6 +21,8 @@ namespace MvcDemos
 
             AreaRegistration.RegisterAllAreas();
 
+            FluentSecurityConfig.SetupFluentSecurity();
+
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

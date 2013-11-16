@@ -52,6 +52,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FluentSecurity">
+      <HintPath>..\..\packages\FluentSecurity.2.0.0\lib\net40\FluentSecurity.dll</HintPath>
+    </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\..\..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
     </Reference>
@@ -180,6 +183,7 @@
     <Compile Include="Areas\SecurityGuard\Models\SelectObject.cs" />
     <Compile Include="Areas\SecurityGuard\Models\UserViewModel.cs" />
     <Compile Include="Areas\SecurityGuard\SecurityGuardAreaRegistration.cs" />
+    <Compile Include="App_Start\FluentSecurityConfig.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />

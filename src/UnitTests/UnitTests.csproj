@@ -129,10 +129,6 @@
       <Project>{031ED841-BF0D-46D0-B56F-114E64C0E9B0}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FluentsecurityDemo\FluentsecurityDemo.csproj">
-      <Project>{750d4875-8d57-41b7-ac21-58c7a27ce284}</Project>
-      <Name>FluentsecurityDemo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MvcDemos\MvcDemos.csproj">
       <Project>{1fb62063-d359-420f-9c5a-a4e7a46ab1a3}</Project>
       <Name>MvcDemos</Name>
