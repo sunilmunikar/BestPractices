@@ -71,6 +71,9 @@
     <Reference Include="MvcInstaller.MVC4">
       <HintPath>..\..\packages\MvcInstaller.MVC4.1.1.1.1\lib\net40\MvcInstaller.MVC4.dll</HintPath>
     </Reference>
+    <Reference Include="MvcSiteMapProvider">
+      <HintPath>..\..\packages\MvcSiteMapProvider.MVC4.Core.4.4.5\lib\net40\MvcSiteMapProvider.dll</HintPath>
+    </Reference>
     <Reference Include="SecurityGuard">
       <HintPath>..\..\packages\SecurityGuard.MVC4.1.0.10\lib\net40\SecurityGuard.dll</HintPath>
     </Reference>
@@ -151,6 +154,9 @@
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
@@ -175,6 +181,7 @@
     <Compile Include="Areas\SecurityGuard\Models\UserViewModel.cs" />
     <Compile Include="Areas\SecurityGuard\SecurityGuardAreaRegistration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="Mailers\IPasswordResetMailer.cs" />
     <Compile Include="Mailers\Models\MailerModel.cs" />
@@ -303,6 +310,10 @@
     <Content Include="Areas\SecurityGuard\Views\Membership\CreateUser.cshtml" />
     <Content Include="Areas\SecurityGuard\Views\Dashboard\Index.cshtml" />
     <Content Include="installer.config" />
+    <Content Include="Mvc.sitemap" />
+    <None Include="MvcSiteMapSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="MvcInstaller\ajax-loader.gif" />
     <Content Include="MvcInstaller\jquery-1.6.1.min.js" />
@@ -697,6 +708,15 @@
     <Content Include="Views\SGAccount\ChangePassword.cshtml" />
     <Content Include="Views\PasswordResetMailer\PasswordReset.cshtml" />
     <Content Include="Views\PasswordResetMailer\_Layout.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

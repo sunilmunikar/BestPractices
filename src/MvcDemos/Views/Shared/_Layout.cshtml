@@ -11,10 +11,11 @@
 <body>
     <div id="header">
         <h1><a href="/">ASP.NET MVC</a></h1>
-        <ul id="navlist">
+        @* <ul id="navlist">
             <li class="first"><a href="@Url.Content("~")" id="current">Home</a></li>
             <li><a href="@Url.Content("~/MvcDemos/")">MvcDemos</a></li>
-        </ul>
+        </ul>*@
+        @Html.MvcSiteMap().Menu()
     </div>
     <div id="main">
         @RenderBody()
