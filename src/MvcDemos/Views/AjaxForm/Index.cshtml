@@ -7,13 +7,20 @@
 
 <script>
     $(function () {
-        index.init();
+        //index.init();
+        $("#open").on("click", function() {
+            JqueryDialog("", function() {
+                $("body").css("background-color", "salmon");
+            });
+        });
     });
 </script>
 
 <h2>Parent page</h2>
 
 <button id="create-user">Create</button>
+
+<button class="k-button" id="open">show</button>
 
 <div id="dialog-form" title="Create new genre">
     @{ Html.RenderPartial("_Create"); }
