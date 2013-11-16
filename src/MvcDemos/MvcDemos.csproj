@@ -237,6 +237,7 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="packages.config" />
+    <Content Include="app\AjaxForm\index.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.3.js" />

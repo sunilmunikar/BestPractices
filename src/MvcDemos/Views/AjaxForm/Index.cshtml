@@ -1,25 +1,20 @@
-﻿@model Core.Entities.Account
+﻿@model MvcDemos.ViewModels.GenreEditModel
 @{
     ViewBag.Title = "Create";
 }
 
+<script src="~/app/AjaxForm/index.js"></script>
+
 <script>
     $(function () {
-        $("#dialog-form").dialog();
-
-        $("#create-user")
-      .button()
-      .click(function () {
-          $("#dialog-form").dialog("open");
-      });
-
+        index.init();
     });
 </script>
 
 <h2>Parent page</h2>
 
-<button id="create-user">Create new user</button>
+<button id="create-user">Create</button>
 
-<div id="dialog-form" title="Create new user" >
+<div id="dialog-form" title="Create new genre">
     @{ Html.RenderPartial("_Create"); }
 </div>

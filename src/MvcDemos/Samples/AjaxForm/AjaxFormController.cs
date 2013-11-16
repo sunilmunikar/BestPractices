@@ -1,5 +1,5 @@
-﻿using Core.Entities;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using MvcDemos.ViewModels;
 
 namespace MvcDemos.Controllers
 {
@@ -17,7 +17,7 @@ namespace MvcDemos.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Account model)
+        public ActionResult Index(GenreEditModel model)
         {
             if (ModelState.IsValid)
             {
