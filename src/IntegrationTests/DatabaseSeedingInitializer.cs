@@ -1,5 +1,4 @@
 ﻿using Core.Entities;
-using MvcDemos.Models;
 using System.Data.Entity;
 
 namespace IntegrationTests

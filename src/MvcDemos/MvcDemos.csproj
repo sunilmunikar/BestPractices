@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvcDemos</RootNamespace>
     <AssemblyName>MvcDemos</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -187,6 +187,9 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
+    <Compile Include="Helpers\FluentSecurity\SecurityHelper.cs" />
+    <Compile Include="Helpers\FluentSecurity\DefaultPolicyViolationHandler.cs" />
+    <Compile Include="Helpers\MvcSiteMap\ReviumVisibilityProvider.cs" />
     <Compile Include="Mailers\IPasswordResetMailer.cs" />
     <Compile Include="Mailers\Models\MailerModel.cs" />
     <Compile Include="Mailers\PasswordResetMailer.cs" />
@@ -743,6 +746,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{1f65de4e-25b6-483a-b1bc-cc38fceb6da1}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{031ED841-BF0D-46D0-B56F-114E64C0E9B0}</Project>
       <Name>Core</Name>

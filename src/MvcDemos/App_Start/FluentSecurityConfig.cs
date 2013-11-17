@@ -1,5 +1,7 @@
 ﻿using System.Web;
+using Common;
 using FluentSecurity;
+using MvcDemos.Areas.SecurityGuard.Controllers;
 using MvcDemos.Controllers;
 
 namespace MvcDemos
@@ -14,7 +16,16 @@ namespace MvcDemos
                 configuration.GetAuthenticationStatusFrom(() =>
                     HttpContext.Current.User.Identity.IsAuthenticated);
 
-                configuration.For<HomeController>().DenyAnonymousAccess();
+                //configuration.ForAllControllers().DenyAnonymousAccess();
+                configuration.ForAllControllers().AllowAny();
+                configuration.Advanced.IgnoreMissingConfiguration();
+
+                //configuration.For<HomeController>().DenyAnonymousAccess();
+
+                //first deny access to all users except Administrators
+                configuration.ForAllControllersInNamespaceContainingType<DashboardController>()
+                    .DenyAuthenticatedAccess()
+                    .RequireAnyRole(RoleName.SecurityGuard);
 
                 // Make sure that users can still log on
                 //configuration.For<AccountController>(ac => ac.LogOn()).Ignore();
