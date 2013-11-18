@@ -78,4 +78,7 @@ Global
 		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517} = {D9265313-B202-4602-B36C-F77F60D8839D}
 		{9951DAAE-3F8D-4134-972E-EF20C7728CD4} = {D9265313-B202-4602-B36C-F77F60D8839D}
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@ using MvcSiteMapProvider;
 
 namespace MvcDemos.Helpers.MvcSiteMap
 {
-    public class ReviumVisibilityProvider : SiteMapNodeVisibilityProviderBase
+    public class MyCustomVisibilityProvider : SiteMapNodeVisibilityProviderBase
     {
         //public bool IsVisible(ISiteMapNode node, HttpContext context, IDictionary<string, object> sourceMetadata)
         //{
@@ -35,7 +35,7 @@ namespace MvcDemos.Helpers.MvcSiteMap
             //if (!isVisible)
             //    return false;
 
-            return true;
+            return false;
         }
 
 

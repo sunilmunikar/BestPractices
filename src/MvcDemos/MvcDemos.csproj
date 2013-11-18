@@ -68,6 +68,15 @@
       <HintPath>..\..\packages\GenericRepository.EntityFramework.0.3.1-pre01\lib\net40\GenericRepository.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -90,6 +99,7 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -169,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CompositionRoot.cs" />
+    <Compile Include="App_Start\DIConfig.cs" />
+    <Compile Include="App_Start\MvcSiteMapProviderConfig.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\MembershipController.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\RoleController.cs" />
@@ -189,9 +202,15 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
+    <Compile Include="DI\CommonConventions.cs" />
+    <Compile Include="DI\IDependencyInjectionContainer.cs" />
+    <Compile Include="DI\InjectableControllerFactory.cs" />
+    <Compile Include="DI\InjectableDependencyResolver.cs" />
+    <Compile Include="DI\Unity\ContainerExtensions\MvcSiteMapProviderContainerExtension.cs" />
+    <Compile Include="DI\Unity\UnityDependencyInjectionContainer.cs" />
     <Compile Include="Helpers\FluentSecurity\SecurityHelper.cs" />
     <Compile Include="Helpers\FluentSecurity\DefaultPolicyViolationHandler.cs" />
-    <Compile Include="Helpers\MvcSiteMap\ReviumVisibilityProvider.cs" />
+    <Compile Include="Helpers\MvcSiteMap\MyCustomVisibilityProvider.cs" />
     <Compile Include="Mailers\IPasswordResetMailer.cs" />
     <Compile Include="Mailers\Models\MailerModel.cs" />
     <Compile Include="Mailers\PasswordResetMailer.cs" />
@@ -309,6 +328,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="DI\Unity\ReadMe.txt" />
     <Content Include="Global.asax" />
     <Content Include="Areas\SecurityGuard\Views\Web.config" />
     <Content Include="Areas\SecurityGuard\Views\Shared\_SecurityGuardLayoutPage.cshtml" />
@@ -692,7 +712,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Install\Index.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -776,7 +798,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>55023</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:56205/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
