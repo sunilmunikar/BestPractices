@@ -7,7 +7,7 @@ using MvcDemos.Controllers;
 
 namespace MvcDemos.Areas.SecurityGuard.Controllers
 {
-    [Authorize(Roles = "SecurityGuard")]
+    //[Authorize(Roles = "SecurityGuard")]
     public partial class DashboardController : BaseController
     {
 

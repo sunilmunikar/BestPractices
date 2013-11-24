@@ -6,6 +6,16 @@
   <mvcSiteMapNode title="Home" controller="Home" action="Index">
     <!--<mvcSiteMapNode title="About" controller="Home" action="About"/>-->
     <mvcSiteMapNode title="About" controller="Home" action="About" visibilityProvider="MvcDemos.Helpers.MvcSiteMap.MyCustomVisibilityProvider, MvcDemos" />
+    <mvcSiteMapNode title="AnonymouslyVisible" controller="Home" action="AnonymouslyVisible" visibilityProvider="MvcDemos.Helpers.MvcSiteMap.MyCustomVisibilityProvider, MvcDemos" />
+  
+    <mvcSiteMapNode title="Security guard" controller="SGAccount" action="Index">
+      <mvcSiteMapNode title="Login" controller="SGAccount" action="Login" />
+      
+      <mvcSiteMapNode title="Dashboard" controller="SecurityGuard" action="Index" visibilityProvider="MvcDemos.Helpers.MvcSiteMap.MyCustomVisibilityProvider, MvcDemos" />
+
+    </mvcSiteMapNode>
+
   </mvcSiteMapNode>
+
 
 </mvcSiteMap>

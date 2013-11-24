@@ -15,5 +15,10 @@ namespace MvcDemos.Controllers
         {
             return View();
         }
+
+        public ActionResult AnonymouslyVisible()
+        {
+            return View();
+        }
     }
 }

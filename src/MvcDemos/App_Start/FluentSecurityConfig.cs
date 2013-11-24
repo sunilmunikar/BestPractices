@@ -17,12 +17,17 @@ namespace MvcDemos
                     HttpContext.Current.User.Identity.IsAuthenticated);
 
                 //configuration.ForAllControllers().DenyAnonymousAccess();
-                configuration.ForAllControllers().AllowAny();
+                configuration.ForAllControllers().Ignore();
                 configuration.Advanced.IgnoreMissingConfiguration();
 
-                //configuration.For<HomeController>().DenyAnonymousAccess();
+                configuration.For<HomeController>(x => x.About()).DenyAnonymousAccess();
+                configuration.For<HomeController>(x => x.AnonymouslyVisible()).Ignore();
 
-                //first deny access to all users except Administrators
+                configuration.For<SGAccountController>(x => x.Index()).Ignore();
+                configuration.For<SGAccountController>(x => x.Login()).Ignore();
+
+
+                ////first deny access to all users except Administrators
                 configuration.ForAllControllersInNamespaceContainingType<DashboardController>()
                     .DenyAuthenticatedAccess()
                     .RequireAnyRole(RoleName.SecurityGuard);
