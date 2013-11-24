@@ -1,14 +1,9 @@
 ﻿@model MvcDemos.ViewModels.GenreEditModel
 
-@{
-    ViewBag.Title = "Create";
-}
-
 <h2>Create</h2>
 @using (Html.BeginForm())
 {
     @Html.EditorForModel()
-    <button name="submit" value="submit" >submit</button>  
-                <input type="submit" value="Create" />
-    
+
+    <button name="submit" value="submit">Submit</button>      
 }
