@@ -23,5 +23,11 @@ namespace MvcDemos.ViewModels
         [Display(Name = "End date")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateToCompareAgainst { get; set; }
+
+        public bool UseCustomSlug { get; set; }
+
+        [RequiredIfTrue(BooleanPropertyName = "UseCustomSlug", ErrorMessage = "Please provide a custom slug if you opt for one.")]
+        public string CustomSlug { get; set; }
+
     }
 }

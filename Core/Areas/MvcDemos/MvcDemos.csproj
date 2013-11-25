@@ -167,6 +167,7 @@
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
     <Compile Include="Validators\NotEqualPropertyValidator.cs" />
+    <Compile Include="Validators\RequiredIfTrueAttribute.cs" />
     <Compile Include="ViewModels\GenreEditModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -237,9 +238,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="js\lessThanOrEqualToValidatorAdapter.js" />
+    <Content Include="js\validatorAdapters\lessThanOrEqualToValidatorAdapter.js" />
     <Content Include="js\plugins.js" />
-    <Content Include="js\notequalValidatorAdapter.js" />
+    <Content Include="js\validatorAdapters\notequalValidatorAdapter.js" />
+    <Content Include="js\validatorAdapters\requiredIfTrueValidatorAdapter.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />

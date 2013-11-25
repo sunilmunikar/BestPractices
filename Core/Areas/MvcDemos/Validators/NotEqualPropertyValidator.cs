@@ -9,7 +9,8 @@ namespace MvcDemos.Validators
 {
     public class NotEqualPropertyValidator : FluentValidationPropertyValidator
     {
-        public NotEqualPropertyValidator(ModelMetadata metadata, ControllerContext controllerContext, PropertyRule rule, IPropertyValidator validator)
+        public NotEqualPropertyValidator(
+            ModelMetadata metadata, ControllerContext controllerContext, PropertyRule rule, IPropertyValidator validator)
             : base(metadata, controllerContext, rule, validator)
         {
         }
