@@ -10,10 +10,12 @@
   
     <mvcSiteMapNode title="Security guard" controller="SGAccount" action="Index">
       <mvcSiteMapNode title="Login" controller="SGAccount" action="Login" />
-      
       <mvcSiteMapNode title="Dashboard" controller="SecurityGuard" action="Index" visibilityProvider="MvcDemos.Helpers.MvcSiteMap.MyCustomVisibilityProvider, MvcDemos" />
-
     </mvcSiteMapNode>
+    
+  <mvcSiteMapNode title="JqGrid" controller="JqGridDemo" action="Index">
+    <!--<mvcSiteMapNode title="Demo" controller="JqGridDemo" action="Index" />-->
+  </mvcSiteMapNode>
 
   </mvcSiteMapNode>
 
