@@ -17,6 +17,10 @@
     <!--<mvcSiteMapNode title="Demo" controller="JqGridDemo" action="Index" />-->
   </mvcSiteMapNode>
 
+    <mvcSiteMapNode title="Validation" controller="Genre" action="Index">
+      <mvcSiteMapNode title="client validation" controller="Genre" action="create"></mvcSiteMapNode>  
+    </mvcSiteMapNode>
+    
   </mvcSiteMapNode>
 
 

@@ -238,6 +238,9 @@
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
+    <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
+    <Compile Include="Validators\NotEqualPropertyValidator.cs" />
+    <Compile Include="Validators\RequiredIfTrueAttribute.cs" />
     <Compile Include="ViewModels\GenreEditModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -344,6 +347,10 @@
     <Content Include="Areas\SecurityGuard\Views\Membership\CreateUser.cshtml" />
     <Content Include="Areas\SecurityGuard\Views\Dashboard\Index.cshtml" />
     <Content Include="installer.config" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\validatorAdapters\lessThanOrEqualToValidatorAdapter.js" />
+    <Content Include="js\validatorAdapters\notequalValidatorAdapter.js" />
+    <Content Include="js\validatorAdapters\requiredIfTrueValidatorAdapter.js" />
     <Content Include="Mvc.sitemap" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
@@ -759,6 +766,9 @@
     <Content Include="Scripts\jquery.jqGrid.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Install\Index.aspx" />
@@ -771,7 +781,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\AjaxForm\Index.cshtml" />

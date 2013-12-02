@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using FluentValidation.Mvc;
+using FluentValidation.Validators;
+using MvcDemos.Validators;
 
 namespace MvcDemos
 {
@@ -28,8 +26,12 @@ namespace MvcDemos
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            FluentValidationModelValidatorProvider.Configure();
-
+            //FluentValidationModelValidatorProvider.Configure();
+            FluentValidationModelValidatorProvider.Configure(provider =>
+            {
+                provider.Add(typeof(NotEqualValidator), (metadata, context, description, validator) => new NotEqualPropertyValidator(metadata, context, description, validator));
+                provider.Add(typeof(LessThanOrEqualValidator), (metadata, context, rule, validator) => new LessThanOrEqualToFluentValidationPropertyValidator(metadata, context, rule, validator));
+            });
         }
     }
 }
