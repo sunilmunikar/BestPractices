@@ -168,6 +168,9 @@
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator">
+      <HintPath>..\..\packages\WebActivator.1.4.4\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
@@ -181,6 +184,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\CompositionRoot.cs" />
     <Compile Include="App_Start\DIConfig.cs" />
+    <Compile Include="App_Start\MagicalUnicornCustomErrorHandling.cs" />
     <Compile Include="App_Start\MvcSiteMapProviderConfig.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\MembershipController.cs" />
@@ -202,6 +206,7 @@
     <Compile Include="code\IBusinessService.cs" />
     <Compile Include="code\StrategyFactory.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="DI\CommonConventions.cs" />
@@ -247,6 +252,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\Images\Error\NotFound.jpg" />
+    <Content Include="Content\Images\Error\ServerError.jpg" />
     <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
     <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
     <Content Include="Content\SecurityGuard\images\blue_ico.png" />
@@ -811,6 +818,8 @@
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\JqGridDemo\Index.cshtml" />
+    <Content Include="Views\Error\ServerError.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
