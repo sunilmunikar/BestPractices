@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -32,6 +34,17 @@ namespace MvcDemos
                 provider.Add(typeof(NotEqualValidator), (metadata, context, description, validator) => new NotEqualPropertyValidator(metadata, context, description, validator));
                 provider.Add(typeof(LessThanOrEqualValidator), (metadata, context, rule, validator) => new LessThanOrEqualToFluentValidationPropertyValidator(metadata, context, rule, validator));
             });
+
+            // NOTE: Remove the following lines if you need .aspx support
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
+
+            MvcHandler.DisableMvcResponseHeader = true;
         }
+
+        //protected void Application_Error(object sender, EventArgs e)
+        //{
+        //    var exception = Server.GetLastError();
+        //}
     }
 }

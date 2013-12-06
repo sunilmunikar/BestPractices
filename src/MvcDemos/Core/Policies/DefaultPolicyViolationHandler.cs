@@ -1,7 +1,8 @@
 ﻿using System.Web.Mvc;
 using FluentSecurity;
+using MvcDemos.Core.Providers;
 
-namespace MvcDemos.Helpers.FluentSecurity
+namespace MvcDemos.Core.Policies
 {
     public class DefaultPolicyViolationHandler : IPolicyViolationHandler
     {
@@ -9,13 +10,13 @@ namespace MvcDemos.Helpers.FluentSecurity
 
         public ActionResult Handle(PolicyViolationException exception)
         {
-            if (SecurityHelper.UserIsAuthenticated())
+            if (SecurityProvider.UserIsAuthenticated())
             {
                 return new ViewResult { ViewName = ViewName };
             }
             else
             {
-                System.Web.Routing.RouteValueDictionary rvd = new System.Web.Routing.RouteValueDictionary();
+                var rvd = new System.Web.Routing.RouteValueDictionary();
 
                 if (System.Web.HttpContext.Current.Request.RawUrl != "/")
                     rvd["ReturnUrl"] = System.Web.HttpContext.Current.Request.RawUrl;

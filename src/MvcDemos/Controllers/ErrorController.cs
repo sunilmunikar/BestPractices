@@ -15,6 +15,16 @@ namespace MvcDemos.Controllers
         public ActionResult ServerError()
         {
             Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            
+            // Todo: Pass the exception into the view model, which you can make.
+            //       That's an exercise, dear reader, for -you-.
+            //       In case u want to pass it to the view, if you're admin, etc.
+            // if (User.IsAdmin) // <-- I just made that up :) U get the idea...
+            {
+                var exception = Server.GetLastError();
+                // etc..
+            }
+
             return View();
         }
 

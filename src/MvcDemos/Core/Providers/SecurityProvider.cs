@@ -3,9 +3,9 @@ using System.Linq;
 using System.Web;
 using FluentSecurity;
 
-namespace MvcDemos.Helpers.FluentSecurity
+namespace MvcDemos.Core.Providers
 {
-    public class SecurityHelper
+    public class SecurityProvider
     {
         public static bool UserIsAuthenticated()
         {
