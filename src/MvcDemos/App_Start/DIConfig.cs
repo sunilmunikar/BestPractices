@@ -1,5 +1,7 @@
 using System;
 using System.Web.Mvc;
+using MvcDemos.Core;
+using MvcDemos.Core.GlobalError;
 using MvcDemos.DI;
 
 
@@ -28,16 +30,18 @@ public class DIConfig
         var dependencyResolver = new InjectableDependencyResolver(container, DependencyResolver.Current);
         DependencyResolver.SetResolver(dependencyResolver);
 #else
-// ************************************************************************************** //
-//  Controller Factory
-//
-//  It is recommended to use Controller Factory unless you are getting errors due to a conflict.
-//
-// ************************************************************************************** //
+        // ************************************************************************************** //
+        //  Controller Factory
+        //
+        //  It is recommended to use Controller Factory unless you are getting errors due to a conflict.
+        //
+        // ************************************************************************************** //
 
-// Reconfigure MVC to use DI
+        // Reconfigure MVC to use DI
         var controllerFactory = new InjectableControllerFactory(container);
         ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+        //http://blog.ploeh.dk/2009/12/14/WiringASP.NETMVCErrorHandlingwithCastleWindsor/
+        ControllerBuilder.Current.SetControllerFactory(new ErrorHandlingControllerFactory());
 #endif
 
         MvcSiteMapProviderConfig.Register(container);

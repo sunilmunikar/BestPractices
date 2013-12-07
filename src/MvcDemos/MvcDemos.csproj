@@ -210,6 +210,18 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="Core\Components\CoreController.cs" />
+    <Compile Include="Core\GlobalError\ErrorHandlingActionInvoker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GlobalError\ErrorHandlingControllerFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GlobalError\ErrorFilterHelper.cs" />
+    <Compile Include="Core\GlobalError\HandleExceptionFilter.cs" />
+    <Compile Include="Core\GlobalError\ILoggingService.cs" />
+    <Compile Include="Core\GlobalError\LoggingExceptionFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Core\Policies\DenyAccessPolicyViolationHandler.cs" />
     <Compile Include="Core\Policies\LocalOnlyPolicy.cs" />
     <Compile Include="DI\CommonConventions.cs" />

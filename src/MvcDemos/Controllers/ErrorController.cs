@@ -31,7 +31,9 @@ namespace MvcDemos.Controllers
         // Shhh .. secret test method .. ooOOooOooOOOooohhhhhhhh
         public ActionResult ThrowError()
         {
-            throw new NotImplementedException("Pew ^ Pew");
+            throw new Exception("A test exception for ELMAH");
+
+            //throw new NotImplementedException("Pew ^ Pew");
         }
     }
 }
