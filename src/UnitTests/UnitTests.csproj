@@ -122,13 +122,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Services\GenreServiceTests.cs" />
     <Compile Include="FakeDbSet.cs" />
     <Compile Include="FluentsecurityDemo\FluentsecurityTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlEnumHelperTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlHelper.cs" />
     <Compile Include="MvcDemos\code\IdentifyRoleFactoryTests.cs" />
     <Compile Include="MvcDemos\Controllers\StoreControllerTests.cs" />
-    <Compile Include="MvcDemos\GenreServiceTests.cs" />
     <Compile Include="MvcDemos\Validators\GenreValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

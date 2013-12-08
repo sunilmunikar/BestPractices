@@ -10,6 +10,7 @@ internal class CompositionRoot
     {
         var container = new UnityContainer();
         container.AddNewExtension<MvcSiteMapProviderContainerExtension>();
+        container.AddNewExtension<MvcDemosContainerExtension>();
 
         return new UnityDependencyInjectionContainer(container);
     }

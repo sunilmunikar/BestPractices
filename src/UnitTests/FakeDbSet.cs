@@ -10,72 +10,60 @@ namespace UnitTests
 {
     public class FakeDbSet<TEntity> : IDbSet<TEntity> where TEntity : class
     {
-
-        ObservableCollection<TEntity> _collection;
-        IQueryable _query;
+        private readonly ObservableCollection<TEntity> _collection;
+        private readonly IQueryable _query;
 
         public FakeDbSet()
         {
-
             _collection = new ObservableCollection<TEntity>();
             _query = _collection.AsQueryable();
         }
 
         public TEntity Add(TEntity entity)
         {
-
             _collection.Add(entity);
             return entity;
         }
 
-
         public TEntity Attach(TEntity entity)
         {
-
             _collection.Add(entity);
             return entity;
         }
 
         public TDerivedEntity Create<TDerivedEntity>() where TDerivedEntity : class, TEntity
         {
-
             return Activator.CreateInstance<TDerivedEntity>();
         }
 
         public TEntity Create()
         {
-
             return Activator.CreateInstance<TEntity>();
         }
 
         public TEntity Find(params object[] keyValues)
         {
-
             throw new NotImplementedException();
         }
 
         public ObservableCollection<TEntity> Local
         {
-
             get { return _collection; }
         }
 
         public TEntity Remove(TEntity entity)
         {
-
             _collection.Remove(entity);
             return entity;
         }
 
         public IEnumerator<TEntity> GetEnumerator()
         {
-
             return _collection.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-
             return _collection.GetEnumerator();
         }
 

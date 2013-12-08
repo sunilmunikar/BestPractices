@@ -1,15 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using Core.Services;
 using MvcDemos.ViewModels;
 using System.Web.Mvc;
+using CoreLayer = Core.Entities;
 
 namespace MvcDemos.Samples.FluentValidation
 {
     public class GenreController : Controller
     {
-        public GenreController()
+        private readonly IGenreService genreService;
+
+        public GenreController(IGenreService genreService)
         {
             HtmlHelper.ClientValidationEnabled = true;
             HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+
+            this.genreService = genreService;
         }
 
         public ActionResult Index()
@@ -37,6 +44,15 @@ namespace MvcDemos.Samples.FluentValidation
                 return RedirectToAction("Index");
 
             return View(model);
+        }
+
+
+        public JsonResult GetGenre(int? id)
+        {
+            this.genreService.GetGenre(id.Value);
+
+            IEnumerable<CoreLayer.Genre> data = new CoreLayer.Genre[0];
+            return Json(data);
         }
     }
 }

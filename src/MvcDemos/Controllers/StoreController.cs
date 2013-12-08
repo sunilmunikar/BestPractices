@@ -1,25 +1,17 @@
 ﻿using Core.Entities;
 using Core.Services;
-using GenericRepository.EntityFramework;
-using MvcDemos.Models;
 using System.Web.Mvc;
 
 namespace MvcDemos.Controllers
 {
     public class StoreController : Controller
     {
-        //private MusicStoreEntities db = new MusicStoreEntities();
         private readonly IGenreService _genreService;
-
-        public StoreController()
-            : this(new GenreService(new EntityRepository<Genre>(new MusicStoreEntities())))
-        {
-            HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
-        }
 
         public StoreController(IGenreService genreService)
         {
             _genreService = genreService;
+            HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
         }
 
         public ActionResult Index()

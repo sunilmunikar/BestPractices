@@ -228,6 +228,7 @@
     <Compile Include="DI\IDependencyInjectionContainer.cs" />
     <Compile Include="DI\InjectableControllerFactory.cs" />
     <Compile Include="DI\InjectableDependencyResolver.cs" />
+    <Compile Include="DI\Unity\ContainerExtensions\MvcDemosContainerExtension.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\MvcSiteMapProviderContainerExtension.cs" />
     <Compile Include="DI\Unity\UnityDependencyInjectionContainer.cs" />
     <Compile Include="Core\Providers\SecurityProvider.cs" />
