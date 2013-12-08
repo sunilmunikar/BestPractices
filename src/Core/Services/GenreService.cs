@@ -1,8 +1,9 @@
-﻿using Core.Entities;
-using Core.Handlers;
+﻿using AutoMapper;
+using Core.Dtos;
+using Core.Entities;
 using FluentValidation;
+using GenericRepository;
 using GenericRepository.EntityFramework;
-using System.Collections.Generic;
 
 namespace Core.Services
 {
@@ -10,23 +11,30 @@ namespace Core.Services
     {
         private readonly IEntityRepository<Genre> _genreRepository;
         private readonly IValidator<Genre> _hasPermission;
+        private readonly IMappingEngine _mapper;
 
-        public GenreService(IEntityRepository<Genre> genreRepository, IValidator<Genre> hasPermission )
+        public GenreService(
+            IEntityRepository<Genre> genreRepository,
+            IValidator<Genre> hasPermission,
+            IMappingEngine mapper)
         {
             _genreRepository = genreRepository;
             _hasPermission = hasPermission;
+            _mapper = mapper;
         }
 
-        public IEnumerable<Genre> GetGenres()
+        public PaginatedDto<GenreDto> GetGenres(int pageIndex, int pageSize)
         {
-            
-            return _genreRepository.GetAll();
+            //return _genreRepository.GetAll();
+            var entities = _genreRepository.Paginate(pageIndex, pageSize);
+            var dtos = _mapper.Map<PaginatedList<Genre>, PaginatedDto<GenreDto>>(entities);
+            return dtos;
         }
 
         public Genre GetGenre(int id)
         {
             Genre result = _genreRepository.GetSingle(id);
-                       
+
             //var validationResult = _hasPermission.Validate(result);
             _hasPermission.ValidateAndThrow(result);
 

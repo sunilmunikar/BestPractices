@@ -1,8 +1,10 @@
 using System;
+using System.Web.Http;
 using System.Web.Mvc;
 using MvcDemos.Core;
 using MvcDemos.Core.GlobalError;
 using MvcDemos.DI;
+using MvcDemos.DI.Unity;
 
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(DIConfig), "Register")]
@@ -40,6 +42,8 @@ public class DIConfig
         // Reconfigure MVC to use DI
         var controllerFactory = new InjectableControllerFactory(container);
         ControllerBuilder.Current.SetControllerFactory(controllerFactory);
+
+
         //http://blog.ploeh.dk/2009/12/14/WiringASP.NETMVCErrorHandlingwithCastleWindsor/
         //ControllerBuilder.Current.SetControllerFactory(new ErrorHandlingControllerFactory());
 #endif

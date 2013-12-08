@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using Core.Dtos;
 using Core.Services;
+using System.Linq;
 
 namespace MvcDemos.ApiControllers
 {
@@ -12,19 +10,16 @@ namespace MvcDemos.ApiControllers
     {
         private readonly IGenreService _genreService;
 
-        public GenreController()
-        {
-            
-        }
         public GenreController(IGenreService genreService)
         {
             _genreService = genreService;
         }
 
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public PaginatedDto<GenreDto> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            PaginatedDto<GenreDto> result = _genreService.GetGenres(1, 1);
+            return result;
         }
 
         // GET api/<controller>/5
