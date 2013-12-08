@@ -1,4 +1,5 @@
-﻿using MvcDemos.Models;
+﻿using Core;
+using MvcDemos.Models;
 using System.Data.Entity;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace IntegrationTests
         private void ReCreateDatabaseForTesting()
         {
             Database.SetInitializer(new DatabaseSeedingInitializer());
-            using (var context = new MusicStoreEntities())
+            using (var context = new MvcDemosEntities())
             {
                 context.Database.Initialize(true);
             }

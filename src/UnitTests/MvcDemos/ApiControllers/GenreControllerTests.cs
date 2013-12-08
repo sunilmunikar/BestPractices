@@ -17,7 +17,7 @@ namespace UnitTests.MvcDemos.ApiControllers
             A.CallTo(() => fakeGenereService.GetGenre(A<int>.Ignored)).Returns(new Genre());
 
             var api = new GenreController(fakeGenereService);
-            var result = api.Get();
+            var result = api.Get(1);
             result.Should().NotBeNull();
         } 
     }

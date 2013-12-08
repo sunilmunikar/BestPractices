@@ -49,7 +49,8 @@ namespace Core.Services
 
         public void Add(Genre genre)
         {
-            throw new System.NotImplementedException();
+            _genreRepository.Add(genre);
+            _genreRepository.Save();
         }
 
         public void Delete(int id)

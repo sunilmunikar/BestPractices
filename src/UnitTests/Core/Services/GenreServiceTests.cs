@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Core;
+using AutoMapper;
 using Core.Entities;
-using Core.Handlers;
 using Core.Services;
 using FakeItEasy;
 using FluentAssertions;
@@ -37,8 +36,10 @@ namespace UnitTests.Core.Services
                 var fakeValidator = A.Fake<IValidator<Genre>>();
                 A.CallTo(() => fakeValidator.Validate(A<Genre>.Ignored)).Returns(new ValidationResult());
 
+                var fakeMapping = A.Fake<IMappingEngine>();
+
                 var repo = new EntityRepository<Genre>(entitiesContext);
-                var genreService = new GenreService(repo, fakeValidator);
+                var genreService = new GenreService(repo, fakeValidator, fakeMapping);
 
                 Genre result = genreService.GetGenre(aValidId);
 
@@ -74,7 +75,8 @@ namespace UnitTests.Core.Services
                 A.CallTo(() => fakeValidator.Validate(A<Genre>.Ignored)).Returns(validationResult);
 
                 var repo = new EntityRepository<Genre>(entitiesContext);
-                var genreService = new GenreService(repo, fakeValidator);
+                var fakeMapping = A.Fake<IMappingEngine>();
+                var genreService = new GenreService(repo, fakeValidator, fakeMapping);
 
                 //Genre result = genreService.GetGenre(aValidId);
 

@@ -43,9 +43,12 @@ namespace MvcDemos.Samples.FluentValidation
             if (ModelState.IsValid)
                 return RedirectToAction("Index");
 
+            var genre = new CoreLayer.Genre { Name = model.Name, Description = model.Description };
+
+            genreService.Add(genre);
+
             return View(model);
         }
-
 
         public JsonResult GetGenre(int? id)
         {
