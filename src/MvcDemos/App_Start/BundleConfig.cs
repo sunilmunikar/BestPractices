@@ -21,7 +21,8 @@ namespace MvcDemos
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryplugins").Include(
-                        "~/Scripts/jquery.jqGrid*"));
+                        "~/Scripts/jquery.jqGrid*",
+                        "~/scripts/i18n/grid.locale-en.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -43,6 +44,13 @@ namespace MvcDemos
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/themes/redmond/css").Include(
+                    "~/Content/themes/redmond/jquery-ui-{version}.custom.css"));
+
+            bundles.Add(new StyleBundle("~/Content/themes/jqgrid").Include(
+                "~/Content/Themes/ui.jqgrid.css"));
+
         }
     }
 }

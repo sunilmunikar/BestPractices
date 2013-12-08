@@ -4,9 +4,13 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
     <meta name="viewport" content="width=device-width" />
+
     @Styles.Render(
-            "~/Content/css",
-            "~/Content/themes/base/css")
+        "~/Content/themes/redmond/css",
+        "~/Content/Themes/jqgrid")
+
+    @RenderSection("StyleContent", required: false) 
+
 
     @*@Scripts.Render("~/bundles/modernizr")*@
 </head>
