@@ -7,7 +7,8 @@
 <h2>Create Genre</h2>
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary()
+    @Html.Partial("ValidationSummary", ViewData.ModelState)
+    
 
     @Html.EditorForModel()
 

@@ -396,6 +396,7 @@
     <Content Include="Content\themes\ui.jqgrid.css" />
     <Content Include="Content\themes\vline.gif" />
     <Content Include="DI\Unity\ReadMe.txt" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\SecurityGuard\Views\Web.config" />
     <Content Include="Areas\SecurityGuard\Views\Shared\_SecurityGuardLayoutPage.cshtml" />
@@ -412,6 +413,7 @@
     <Content Include="js\validatorAdapters\requiredIfTrueValidatorAdapter.js" />
     <Content Include="Mvc.sitemap" />
     <Compile Include="DI\Unity\UnityDependencyScope.cs" />
+    <Content Include="Content\Site.css" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -873,6 +875,7 @@
     <Content Include="Views\JqGridDemo\Index.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Shared\ValidationSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
