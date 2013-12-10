@@ -239,6 +239,7 @@
     <Compile Include="DI\InjectableDependencyResolver.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\MvcDemosContainerExtension.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\MvcSiteMapProviderContainerExtension.cs" />
+    <Compile Include="DI\Unity\ContainerExtensions\UnityValidatorFactory.cs" />
     <Compile Include="DI\Unity\UnityDependencyInjectionContainer.cs" />
     <Compile Include="Core\Providers\SecurityProvider.cs" />
     <Compile Include="Core\Policies\DefaultPolicyViolationHandler.cs" />
@@ -263,8 +264,6 @@
       <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\MusicStoreEntities.cs" />
-    <Compile Include="Models\SampleData.cs" />
     <Compile Include="MvcDemosAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

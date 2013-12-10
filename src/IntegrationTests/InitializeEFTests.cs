@@ -1,11 +1,10 @@
 ﻿using Core;
-using MvcDemos.Models;
 using System.Data.Entity;
 using Xunit;
 
 namespace IntegrationTests
 {
-    public class Class1
+    public class InitializeEFTests
     {
         private void ReCreateDatabaseForTesting()
         {
@@ -17,7 +16,7 @@ namespace IntegrationTests
         }
 
         [Fact]
-        public void InitializeEfTest()
+        public void Initialize()
         {
             ReCreateDatabaseForTesting();
         }

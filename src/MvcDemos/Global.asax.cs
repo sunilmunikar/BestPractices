@@ -5,6 +5,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Core;
 using FluentValidation.Mvc;
 using FluentValidation.Validators;
 using MvcDemos.Validators;
@@ -17,7 +18,7 @@ namespace MvcDemos
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new MvcDemos.Models.SampleData());
+            Database.SetInitializer(new SampleData());
 
             AreaRegistration.RegisterAllAreas();
 
@@ -42,9 +43,9 @@ namespace MvcDemos
             MvcHandler.DisableMvcResponseHeader = true;
         }
 
-        //protected void Application_Error(object sender, EventArgs e)
-        //{
-        //    var exception = Server.GetLastError();
-        //}
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            var exception = Server.GetLastError();
+        }
     }
 }

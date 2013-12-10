@@ -17,8 +17,8 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
         {
             Container.RegisterType<IEntitiesContext, MvcDemosEntities>();
             Container.RegisterType<IEntityRepository<Genre>, EntityRepository<Genre>>();
+            Container.RegisterType<IValidatorFactory, UnityValidatorFactory>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IValidator<Genre>, HasPermissionToGet>();
-
             Container.RegisterInstance(Mapper.Engine);
 
             Container.RegisterType<IGenreService, GenreService>();

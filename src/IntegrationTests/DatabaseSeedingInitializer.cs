@@ -1,6 +1,6 @@
-﻿using Core.Entities;
+﻿using Core;
+using Core.Entities;
 using System.Data.Entity;
-using MvcDemos.Models;
 
 namespace IntegrationTests
 {
@@ -10,6 +10,7 @@ namespace IntegrationTests
         {
             var genre = new Genre { Name = "Genre 1" };
             context.Genres.Add(genre);
+            context.SaveChanges();
         }
     }
 }

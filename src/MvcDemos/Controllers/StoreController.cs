@@ -17,8 +17,9 @@ namespace MvcDemos.Controllers
         public ActionResult Index()
         {
             //var genres = db.Genres.ToList();
-            var genres = _genreService.GetGenres(1,1);
-            return View(genres);
+            //var genres = _genreService.GetGenres(1,1);
+            //return View(genres);
+            return View();
         }
 
         public PartialViewResult CreatePartial()

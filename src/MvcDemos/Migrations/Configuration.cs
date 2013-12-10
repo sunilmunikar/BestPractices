@@ -1,3 +1,5 @@
+using Core;
+
 namespace MvcDemos.Migrations
 {
     using System;
@@ -5,14 +7,14 @@ namespace MvcDemos.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MvcDemos.Models.MusicStoreEntities>
+    internal sealed class Configuration : DbMigrationsConfiguration<MusicStoreEntities>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MvcDemos.Models.MusicStoreEntities context)
+        protected override void Seed(MusicStoreEntities context)
         {
             //  This method will be called after migrating to the latest version.
 
