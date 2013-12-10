@@ -271,6 +271,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
+    <Compile Include="ValidationSummaryJQuery.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
     <Compile Include="Validators\NotEqualPropertyValidator.cs" />
