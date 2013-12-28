@@ -271,6 +271,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
+    <Compile Include="Samples\MixedHtmlInput\MixedHtmlInputController.cs" />
     <Compile Include="ValidationSummaryJQuery.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
@@ -876,9 +877,11 @@
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Shared\ValidationSummary.cshtml" />
+    <Content Include="Views\MixedHtmlInput\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\Index.cshtml" />

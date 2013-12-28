@@ -7,23 +7,34 @@
     <!--<mvcSiteMapNode title="About" controller="Home" action="About"/>-->
     <mvcSiteMapNode title="About" controller="Home" action="About" visibilityProvider="MvcDemos.Core.Providers.MyCustomVisibilityProvider, MvcDemos" />
     <mvcSiteMapNode title="AnonymouslyVisible" controller="Home" action="AnonymouslyVisible" visibilityProvider="MvcDemos.Core.Providers.MyCustomVisibilityProvider, MvcDemos" />
-  
+
     <mvcSiteMapNode title="Security guard" controller="SGAccount" action="Index">
       <mvcSiteMapNode title="Login" controller="SGAccount" action="Login" />
       <mvcSiteMapNode title="Dashboard" controller="SecurityGuard" action="Index" visibilityProvider="MvcDemos.Core.Providers.MyCustomVisibilityProvider, MvcDemos" />
     </mvcSiteMapNode>
-    
-  <mvcSiteMapNode title="JqGrid" controller="JqGridDemo" action="Index">
-    <!--<mvcSiteMapNode title="Demo" controller="JqGridDemo" action="Index" />-->
-  </mvcSiteMapNode>
 
-    <mvcSiteMapNode title="Validation" controller="Genre" action="Index">
-      <mvcSiteMapNode title="client validation" controller="Genre" action="create"></mvcSiteMapNode>  
+    <mvcSiteMapNode title="JqGrid" clickable="false">
+      <mvcSiteMapNode title="Load data" controller="JqGridDemo" action="Index" />
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Validation" clickable="false">
+      <mvcSiteMapNode title="servier validation" controller="Genre" action="Index"></mvcSiteMapNode>
+      <mvcSiteMapNode title="client validation" controller="Genre" action="create"></mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Clientside" clickable="false">
+      <mvcSiteMapNode title="Mixed html input" controller="MixedHtmlInput" action="Index"></mvcSiteMapNode>
     </mvcSiteMapNode>
 
     <mvcSiteMapNode title="Error handling" controller="Error" action="ThrowError">
-      
+
     </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="CRUD app" clickable="false">
+      <mvcSiteMapNode title="Entities" controller="Store" action="Index"></mvcSiteMapNode>
+      <mvcSiteMapNode title="DTO" controller="Genre" action="Index"></mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
   </mvcSiteMapNode>
 
 

@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using Core.Entities;
 using Core.Services;
 using MvcDemos.ViewModels;
 using System.Web.Mvc;
-using CoreLayer = Core.Entities;
 
 namespace MvcDemos.Samples.FluentValidation
 {
     public class GenreController : Controller
     {
-        private readonly IGenreService genreService;
+        private readonly IGenreService _genreService;
 
         public GenreController(IGenreService genreService)
         {
             HtmlHelper.ClientValidationEnabled = true;
             HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
 
-            this.genreService = genreService;
+            this._genreService = genreService;
         }
 
         public ActionResult Index()
@@ -43,18 +43,18 @@ namespace MvcDemos.Samples.FluentValidation
             if (ModelState.IsValid)
                 return RedirectToAction("Index");
 
-            var genre = new CoreLayer.Genre { Name = model.Name, Description = model.Description };
+            var genre = new Genre { Name = model.Name, Description = model.Description };
 
-            genreService.Add(genre);
+            _genreService.Add(genre);
 
             return View(model);
         }
 
         public JsonResult GetGenre(int? id)
         {
-            this.genreService.GetGenre(id.Value);
+            this._genreService.GetGenre(id.Value);
 
-            IEnumerable<CoreLayer.Genre> data = new CoreLayer.Genre[0];
+            IEnumerable<Genre> data = new Genre[0];
             return Json(data);
         }
     }

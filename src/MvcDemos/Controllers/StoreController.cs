@@ -1,6 +1,7 @@
-﻿using Core.Entities;
-using Core.Services;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using Core.Entities;
+using Core.Services;
 
 namespace MvcDemos.Controllers
 {
@@ -17,9 +18,9 @@ namespace MvcDemos.Controllers
         public ActionResult Index()
         {
             //var genres = db.Genres.ToList();
-            //var genres = _genreService.GetGenres(1,1);
-            //return View(genres);
-            return View();
+            var genres = _genreService.GetGenres();
+            return View(genres);
+            //return View();
         }
 
         public PartialViewResult CreatePartial()
@@ -82,11 +83,5 @@ namespace MvcDemos.Controllers
             _genreService.Delete(id);
             return RedirectToAction("Index");
         }
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    db.Dispose();
-        //    base.Dispose(disposing);
-        //}
     }
 }

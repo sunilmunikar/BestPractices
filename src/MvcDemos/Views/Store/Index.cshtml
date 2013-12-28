@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "Genre")
 </p>
 <table>
     <tr>
@@ -31,14 +31,25 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class="editLink", data_id=@item.Id} ) |
-@*            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.GenreId })*@
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>
     }
 </table>
 
 
+
+
+<h2>Parent page</h2>
+
+<button id="create">Create</button>
+
+<div id="dialog-form" title="Create new user">
+    @*@{ Html.RenderPartial("_nothing", MvcDemos.Models.Genre); }*@
+</div>
+
+@section scripts{
 <script>
     $(document).ready(function () {
         $("#dialog-form").dialog({
@@ -77,11 +88,4 @@
 
     });
 </script>
-
-<h2>Parent page</h2>
-
-<button id="create">Create</button>
-
-<div id="dialog-form" title="Create new user">
-    @*@{ Html.RenderPartial("_nothing", MvcDemos.Models.Genre); }*@
-</div>
+}

@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using Core.Dtos;
 using Core.Entities;
 using FluentValidation;
@@ -26,11 +27,16 @@ namespace Core.Services
             _mapper = mapper;
         }
 
+        public IEnumerable<Genre> GetGenres()
+        {
+            return _genreRepository.GetAll();
+        }
+
         public PaginatedDto<GenreDto> GetGenres(int pageIndex, int pageSize)
         {
             //return _genreRepository.GetAll();
-            var entities = _genreRepository.Paginate(pageIndex, pageSize);
-            var dtos = _mapper.Map<PaginatedList<Genre>, PaginatedDto<GenreDto>>(entities);
+            PaginatedList<Genre> entities = _genreRepository.Paginate(pageIndex, pageSize);
+            PaginatedDto<GenreDto> dtos = _mapper.Map<PaginatedList<Genre>, PaginatedDto<GenreDto>>(entities);
             return dtos;
         }
 

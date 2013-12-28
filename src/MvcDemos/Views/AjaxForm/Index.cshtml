@@ -3,18 +3,23 @@
     ViewBag.Title = "Create";
 }
 
-<script src="~/app/AjaxForm/index.js"></script>
+@section scripts{
 
-<script>
-    $(function () {
-        //index.init();
-        $("#open").on("click", function() {
-            JqueryDialog("", function() {
-                $("body").css("background-color", "salmon");
+    <script src="~/app/AjaxForm/index.js"></script>
+
+    <script>
+        $(function () {
+            //index.init();
+            $("#open").on("click", function () {
+                JqueryDialog("", function () {
+                    $("body").css("background-color", "salmon");
+                });
             });
         });
-    });
-</script>
+    </script>
+
+}
+
 
 <h2>Parent page</h2>
 
