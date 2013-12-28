@@ -901,6 +901,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\My.Framework\My.Framework.csproj">
+      <Project>{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}</Project>
+      <Name>My.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{1f65de4e-25b6-483a-b1bc-cc38fceb6da1}</Project>
       <Name>Common</Name>

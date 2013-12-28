@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using My.Framework.Mvc.HtmlHelper
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -30,6 +31,7 @@
     </div>
 
     <div id="footer">
+        <span>Version @Html.CurrentVersion() </span>
         built with <a href="http://asp.net/mvc">ASP.NET MVC 4</a>
     </div>
 
