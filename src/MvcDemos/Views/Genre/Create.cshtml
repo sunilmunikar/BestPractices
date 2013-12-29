@@ -8,7 +8,7 @@
 @using (Html.BeginForm())
 {
     @Html.Partial("ValidationSummary", ViewData.ModelState)
-    
+    @Html.AntiForgeryToken()   
 
     @Html.EditorForModel()
 

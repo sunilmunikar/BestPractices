@@ -5,6 +5,7 @@ using Core.Services;
 
 namespace MvcDemos.Controllers
 {
+    //Note: this is just a sample generated from scaffolding
     public class StoreController : Controller
     {
         private readonly IGenreService _genreService;

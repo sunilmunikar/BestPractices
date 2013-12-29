@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using AutoMapper;
 using Core.Entities;
 using Core.Services;
 using MvcDemos.ViewModels;
@@ -38,6 +39,7 @@ namespace MvcDemos.Samples.FluentValidation
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GenreEditModel model)
         {
             if (ModelState.IsValid)
@@ -52,10 +54,27 @@ namespace MvcDemos.Samples.FluentValidation
 
         public JsonResult GetGenre(int? id)
         {
-            this._genreService.GetGenre(id.Value);
+            if (id != null)
+                this._genreService.GetGenre(id.Value);
 
             IEnumerable<Genre> data = new Genre[0];
             return Json(data);
+        }
+
+        public ActionResult Edit(int id = 0)
+        {
+            var genre = _genreService.GetGenre(id);
+            if (genre == null)
+                return HttpNotFound();
+
+            var model = new GenreEditModel()
+                            {
+                                Id = genre.Id,
+                                Name = genre.Name,
+                                Description = genre.Description
+                            };
+
+            return View("Create", model);
         }
     }
 }
