@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using Core.Dtos;
 using Core.Services;
+using Core.Entities;
 
 namespace MvcDemos.ApiControllers
 {
@@ -26,10 +27,9 @@ namespace MvcDemos.ApiControllers
         }
 
         // GET api/<controller>/5
-        public string Get(int id)
+        public Genre Get(int id)
         {
-            _genreService.GetGenre(1);
-            return "value";
+            return _genreService.GetGenre(id);
         }
 
         // POST api/<controller>

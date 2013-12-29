@@ -54,11 +54,11 @@ namespace MvcDemos.Samples.FluentValidation
 
         public JsonResult GetGenre(int? id)
         {
+            Genre data = null;
             if (id != null)
-                this._genreService.GetGenre(id.Value);
+                data = this._genreService.GetGenre(id.Value);
 
-            IEnumerable<Genre> data = new Genre[0];
-            return Json(data);
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Edit(int id = 0)

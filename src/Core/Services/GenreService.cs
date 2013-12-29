@@ -16,14 +16,14 @@ namespace Core.Services
 
         public GenreService(
             IEntityRepository<Genre> genreRepository
-            //,
-            //IValidatorFactory validatorFactory
+            ,
+            IValidatorFactory validatorFactory
             ,
             IMappingEngine mapper
             )
         {
             _genreRepository = genreRepository;
-            //_hasPermission = validatorFactory.GetValidator<Genre>();
+            _hasPermission = validatorFactory.GetValidator<Genre>();
             _mapper = mapper;
         }
 
@@ -44,8 +44,8 @@ namespace Core.Services
         {
             Genre result = _genreRepository.GetSingle(id);
 
-            //var validationResult = _hasPermission.Validate(result);
-            //_hasPermission.ValidateAndThrow(result);
+            var validationResult = _hasPermission.Validate(result);
+            _hasPermission.ValidateAndThrow(result);
 
             return result;
         }
