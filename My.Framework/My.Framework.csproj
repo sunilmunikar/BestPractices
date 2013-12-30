@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\StringBuilerExtension.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Filtering\GenericQueyOptions.cs" />
     <Compile Include="Mvc\HtmlHelper\HtmlEnumHelper.cs" />
     <Compile Include="Mvc\HtmlHelper\VersionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

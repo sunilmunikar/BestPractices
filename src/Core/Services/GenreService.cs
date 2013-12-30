@@ -3,6 +3,7 @@ using AutoMapper;
 using Core.Dtos;
 using Core.Entities;
 using FluentValidation;
+using FluentValidation.Results;
 using GenericRepository;
 using GenericRepository.EntityFramework;
 
@@ -44,8 +45,8 @@ namespace Core.Services
         {
             Genre result = _genreRepository.GetSingle(id);
 
-            var validationResult = _hasPermission.Validate(result);
-            _hasPermission.ValidateAndThrow(result);
+            ValidationResult validationResult = _hasPermission.Validate(result);
+            //_hasPermission.ValidateAndThrow(result);
 
             return result;
         }

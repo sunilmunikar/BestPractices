@@ -132,6 +132,7 @@
     <Compile Include="Core\Handlers\Genre\HasPermissionToGetTests.cs" />
     <Compile Include="Core\Services\GenreServiceTests.cs" />
     <Compile Include="FakeDbSet.cs" />
+    <Compile Include="Filtering\GenericQueryOptionsTests.cs" />
     <Compile Include="FluentsecurityDemo\FluentsecurityTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlEnumHelperTests.cs" />
     <Compile Include="Framework\Mvc\HtmlHelper\HtmlHelper.cs" />
@@ -146,6 +147,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\My.Framework\My.Framework.csproj">
+      <Project>{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}</Project>
+      <Name>My.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{031ED841-BF0D-46D0-B56F-114E64C0E9B0}</Project>
       <Name>Core</Name>
