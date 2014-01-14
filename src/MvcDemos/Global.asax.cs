@@ -15,6 +15,9 @@ using GenericRepository;
 using MvcDemos.Validators;
 using Core.Entities;
 using MvcDemos.ViewModels;
+using MvcDemos.Core;
+using System.Globalization;
+using System.Threading;
 
 namespace MvcDemos
 {
@@ -27,6 +30,7 @@ namespace MvcDemos
             Database.SetInitializer(new SampleData());
 
             AreaRegistration.RegisterAllAreas();
+            ModelMetadataProviders.Current = new CustomModelMetadataProvider();
 
             FluentSecurityConfig.SetupFluentSecurity();
 
@@ -49,6 +53,9 @@ namespace MvcDemos
             ViewEngines.Engines.Add(new RazorViewEngine());
 
             MvcHandler.DisableMvcResponseHeader = true;
+
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("nl");
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
         }
 
         public static void RegisterMappings()

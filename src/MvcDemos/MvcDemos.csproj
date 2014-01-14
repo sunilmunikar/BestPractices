@@ -213,6 +213,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="Core\Components\CoreController.cs" />
+    <Compile Include="Core\CustomModelMetadataProvider.cs" />
     <Compile Include="Core\GlobalError\ErrorHandlingActionInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -247,9 +248,16 @@
     <Compile Include="Models\JqGrid\GridSortOrder.cs" />
     <Compile Include="Models\JqGrid\JqGridArgs.cs" />
     <Compile Include="Models\LogOnViewModel.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
     <Compile Include="Models\MvcApplication3Context.cs" />
     <Compile Include="Models\MvcDemosContext.cs" />
     <Compile Include="Models\RequestStatus.cs" />
+    <Compile Include="Resources\Translations.Designer.cs">
+      <DependentUpon>Translations.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Samples\AjaxForm\AjaxFormController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Migrations\201309081142366_InitialCreate.cs" />
@@ -266,6 +274,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\EnumsTemplates\MovieGenreController.cs" />
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
     <Compile Include="Samples\MixedHtmlInput\MixedHtmlInputController.cs" />
@@ -897,10 +906,11 @@
     <Content Include="Views\Shared\_BootstrapLayout.narrow.cshtml" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\BootstrapMenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
+    <Content Include="Views\MovieGenre\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\Index.cshtml" />
@@ -914,6 +924,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201309081230043_GenereNameRequired.resx">
       <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Translations.nl.resx" />
+    <EmbeddedResource Include="Resources\Translations.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Translations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
