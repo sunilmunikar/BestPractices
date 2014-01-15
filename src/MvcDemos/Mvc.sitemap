@@ -34,9 +34,16 @@
       <mvcSiteMapNode title="Entities" controller="Store" action="Index"></mvcSiteMapNode>
       <mvcSiteMapNode title="DTO" controller="Genre" action="Index"></mvcSiteMapNode>
     </mvcSiteMapNode>
+
     <mvcSiteMapNode title="Security" clickable="false">
       <mvcSiteMapNode title="Parameter tamperaing" controller="ParameterTampering" action="Index"></mvcSiteMapNode>
     </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Random stuff" clickable="false">
+      <mvcSiteMapNode title="Enum" controller="EnumLocalizedDropDown" action="Index" ></mvcSiteMapNode>
+      <mvcSiteMapNode title="Localization" controller="Localization" action="Index" ></mvcSiteMapNode>
+    </mvcSiteMapNode>
+    
   </mvcSiteMapNode>
 
 

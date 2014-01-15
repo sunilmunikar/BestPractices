@@ -120,4 +120,7 @@
   <data name="Action" xml:space="preserve">
     <value>Action nl</value>
   </data>
+  <data name="ChooseYourLanguage" xml:space="preserve">
+    <value>Kies uw taal</value>
+  </data>
 </root>

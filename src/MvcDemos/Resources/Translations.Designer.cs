@@ -70,11 +70,83 @@ namespace MvcDemos.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose your language.
+        /// </summary>
+        public static string ChooseYourLanguage {
+            get {
+                return ResourceManager.GetString("ChooseYourLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drama.
         /// </summary>
         public static string Drama {
             get {
                 return ResourceManager.GetString("Drama", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friday.
+        /// </summary>
+        public static string WeekDay_Friday {
+            get {
+                return ResourceManager.GetString("WeekDay.Friday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monday.
+        /// </summary>
+        public static string WeekDay_Monday {
+            get {
+                return ResourceManager.GetString("WeekDay.Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saturday.
+        /// </summary>
+        public static string WeekDay_Saturday {
+            get {
+                return ResourceManager.GetString("WeekDay.Saturday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sunday.
+        /// </summary>
+        public static string WeekDay_Sunday {
+            get {
+                return ResourceManager.GetString("WeekDay.Sunday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thursday.
+        /// </summary>
+        public static string WeekDay_Thursday {
+            get {
+                return ResourceManager.GetString("WeekDay.Thursday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tuesday.
+        /// </summary>
+        public static string WeekDay_Tuesday {
+            get {
+                return ResourceManager.GetString("WeekDay.Tuesday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wednesday.
+        /// </summary>
+        public static string WeekDay_Wednesday {
+            get {
+                return ResourceManager.GetString("WeekDay.Wednesday", resourceCulture);
             }
         }
     }

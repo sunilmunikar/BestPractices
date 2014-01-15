@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using MvcDemos.Models;
+using System.Web.Mvc;
 
 namespace MvcDemos.Controllers
 {
@@ -20,5 +21,6 @@ namespace MvcDemos.Controllers
         {
             return View();
         }
+
     }
 }

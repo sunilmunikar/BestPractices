@@ -53,9 +53,6 @@ namespace MvcDemos
             ViewEngines.Engines.Add(new RazorViewEngine());
 
             MvcHandler.DisableMvcResponseHeader = true;
-
-            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("nl");
-            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
         }
 
         public static void RegisterMappings()

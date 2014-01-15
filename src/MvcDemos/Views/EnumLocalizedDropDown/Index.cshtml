@@ -1,0 +1,18 @@
+﻿@model  MvcDemos.Models.WeeklyEvent
+@using MvcDemos.Helpers
+
+@{
+    ViewBag.Title = "EnumLocalizedDropDown";
+}
+
+<h2>EnumLocalizedDropDown</h2>
+<h3>Using [LocalizationEnum] attribute</h3>
+<p>
+    <span class="text">Html.EnumDropDownList</span>
+    @(Html.EnumDropDownList<MvcDemos.Models.WeekDay>("selectDay", ""))
+</p>
+<p>
+    <span class="text">Html.EnumDropDownListFor</span>
+    @(Html.EnumDropDownListFor<MvcDemos.Models.WeeklyEvent, MvcDemos.Models.WeekDay>(x => x.Day, "", new { name = "myWeekDay" }))
+</p>
+

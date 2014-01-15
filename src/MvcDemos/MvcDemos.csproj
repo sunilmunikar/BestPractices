@@ -240,9 +240,17 @@
     <Compile Include="Core\Policies\DefaultPolicyViolationHandler.cs" />
     <Compile Include="Core\Providers\MyCustomVisibilityProvider.cs" />
     <Compile Include="DI\Unity\UnityDependencyResolver.cs" />
+    <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\HtmlHelper.EnumDropDownList.cs" />
+    <Compile Include="Helpers\HtmlHelper.EnumDropDownListFor.cs" />
+    <Compile Include="Helpers\LocalizationEnumAttribute.cs" />
+    <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Mailers\IPasswordResetMailer.cs" />
     <Compile Include="Mailers\Models\MailerModel.cs" />
     <Compile Include="Mailers\PasswordResetMailer.cs" />
+    <Compile Include="Models\DayOfWeek.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\GenreModel.cs" />
     <Compile Include="Models\JqGrid\JqGridData.cs" />
     <Compile Include="Models\JqGrid\GridSortOrder.cs" />
@@ -274,6 +282,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\LocalizationController.cs" />
+    <Compile Include="Samples\EnumLocalizedDropDown\EnumLocalizedDropDownController.cs" />
     <Compile Include="Samples\EnumsTemplates\MovieGenreController.cs" />
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
@@ -908,6 +918,8 @@
     <Content Include="Views\Shared\DisplayTemplates\BootstrapMenuHelperModel.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
     <Content Include="Views\MovieGenre\Index.cshtml" />
+    <Content Include="Views\EnumLocalizedDropDown\Index.cshtml" />
+    <Content Include="Views\Localization\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -925,7 +937,7 @@
     <EmbeddedResource Include="Migrations\201309081230043_GenereNameRequired.resx">
       <DependentUpon>201309081230043_GenereNameRequired.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Translations.nl.resx" />
+    <EmbeddedResource Include="Resources\Translations.nl-BE.resx" />
     <EmbeddedResource Include="Resources\Translations.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Translations.Designer.cs</LastGenOutput>

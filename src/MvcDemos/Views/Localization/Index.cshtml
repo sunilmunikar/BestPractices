@@ -1,0 +1,55 @@
+﻿@using MvcDemos.Resources
+
+@{
+    ViewBag.Title = "Localization";
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:checked="checked"
+    }
+}
+
+@using (Html.BeginForm("SetCulture", "Localization"))
+{
+    <fieldset>
+        <legend>@Translations.ChooseYourLanguage</legend>
+        <div class="control-group">
+            <div class="controls">
+                <label for="en-us">
+                    <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="nl">
+                    <input name="culture" id="nl-BE" value="nl-BE" type="radio" @selected("nl-be", culture) /> nl-BE
+                </label>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <label for="fr">
+                    <input name="culture" id="fr" value="fr" type="radio" @selected("fr", culture) /> Fr
+                </label>
+            </div>
+        </div>
+
+    </fieldset>            
+}
+
+@section Scripts {
+
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+                $(this).parents("form").submit(); // post form
+            });
+
+        })(jQuery);
+    </script>
+}

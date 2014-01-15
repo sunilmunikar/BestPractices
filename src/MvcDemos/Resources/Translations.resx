@@ -120,7 +120,31 @@
   <data name="Action" xml:space="preserve">
     <value>Action english</value>
   </data>
+  <data name="ChooseYourLanguage" xml:space="preserve">
+    <value>Choose your language</value>
+  </data>
   <data name="Drama" xml:space="preserve">
     <value>Drama</value>
+  </data>
+  <data name="WeekDay.Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="WeekDay.Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="WeekDay.Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="WeekDay.Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="WeekDay.Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="WeekDay.Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="WeekDay.Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
   </data>
 </root>
