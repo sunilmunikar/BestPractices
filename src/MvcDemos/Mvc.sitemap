@@ -26,9 +26,6 @@
       <mvcSiteMapNode title="Mixed html input" controller="MixedHtmlInput" action="Index"></mvcSiteMapNode>
     </mvcSiteMapNode>
 
-    <mvcSiteMapNode title="Error handling" controller="Error" action="ThrowError">
-
-    </mvcSiteMapNode>
 
     <mvcSiteMapNode title="CRUD app" clickable="false">
       <mvcSiteMapNode title="Entities" controller="Store" action="Index"></mvcSiteMapNode>
@@ -42,6 +39,7 @@
     <mvcSiteMapNode title="Random stuff" clickable="false">
       <mvcSiteMapNode title="Enum" controller="EnumLocalizedDropDown" action="Index" ></mvcSiteMapNode>
       <mvcSiteMapNode title="Localization" controller="Localization" action="Index" ></mvcSiteMapNode>
+      <mvcSiteMapNode title="Error handling" controller="Error" action="TestError" >  </mvcSiteMapNode>
     </mvcSiteMapNode>
     
   </mvcSiteMapNode>

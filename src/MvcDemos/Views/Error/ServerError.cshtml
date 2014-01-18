@@ -1,10 +1,27 @@
-﻿@{
-    ViewBag.Title = "ServerError";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Error";
 }
-
-<h2>500 Server Error</h2>
-
-<p align="center">
-    <img src="/Content/Images/Error/ServerError.jpg" alt="Sad Panda makes it a 500 Server Error :~(" />
-</p>
+<div class="list-header clearfix">
+    <span>Error</span>
+</div>
+<div class="list-sfs-holder">
+    <div class="alert alert-error">
+        An unexpected error has occurred. Please contact the system administrator.
+    </div>
+    @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+    {
+        <div>
+            <p>
+                <b>Exception:</b> @Model.Exception.Message<br />
+                <b>Controller:</b> @Model.ControllerName<br />
+                <b>Action:</b> @Model.ActionName
+            </p>
+            <div style="overflow:scroll">
+                <pre>
+@Model.Exception.StackTrace
+                </pre>
+            </div>
+        </div>
+    }
+</div>

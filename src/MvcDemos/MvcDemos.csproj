@@ -181,13 +181,16 @@
     <Reference Include="WebGrease">
       <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WorldDomination.Web.Mvc">
+      <HintPath>..\..\packages\MagicalUnicorn.MvcErrorToolkit.2.2.2\lib\net40\WorldDomination.Web.Mvc.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiControllers\GenreController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\CompositionRoot.cs" />
+    <Compile Include="App_Start\CustomErrorHander.cs" />
     <Compile Include="App_Start\DIConfig.cs" />
-    <Compile Include="App_Start\MagicalUnicornCustomErrorHandling.cs" />
     <Compile Include="App_Start\MvcSiteMapProviderConfig.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\DashboardController.cs" />
     <Compile Include="Areas\SecurityGuard\Controllers\MembershipController.cs" />
@@ -305,8 +308,6 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\Error\NotFound.jpg" />
-    <Content Include="Content\Images\Error\ServerError.jpg" />
     <Content Include="Content\Images\glyphicons-halflings-white.png" />
     <Content Include="Content\Images\glyphicons-halflings.png" />
     <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
@@ -903,7 +904,6 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\JqGridDemo\Index.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
-    <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Shared\ValidationSummary.cshtml" />
     <Content Include="Views\MixedHtmlInput\Index.cshtml" />
     <Content Include="Views\ParameterTampering\Create.cshtml" />
@@ -920,6 +920,11 @@
     <Content Include="Views\MovieGenre\Index.cshtml" />
     <Content Include="Views\EnumLocalizedDropDown\Index.cshtml" />
     <Content Include="Views\Localization\Index.cshtml" />
+    <Content Include="Views\Error\401.cshtml" />
+    <Content Include="Views\Error\404.cshtml" />
+    <Content Include="Views\Error\500.cshtml" />
+    <Content Include="Views\Error\Unknown.cshtml" />
+    <Content Include="Views\Error\TestError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

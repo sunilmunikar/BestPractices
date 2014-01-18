@@ -4,8 +4,28 @@ using System.Web.Mvc;
 
 namespace MvcDemos.Controllers
 {
+    public class TestErrorViewModel
+    {
+        public bool IsCustomErrorsEnabled { get; set; }
+        public string IsCustomErrorsEnabledText { get; set; }
+
+    }
+
     public class ErrorController : Controller
     {
+        public ActionResult TestError()
+        {
+            var model = new TestErrorViewModel
+            {
+                IsCustomErrorsEnabled = ControllerContext.HttpContext.IsCustomErrorEnabled,
+                IsCustomErrorsEnabledText = ControllerContext.HttpContext.IsCustomErrorEnabled
+                                                ? "The defined custom error view will be rendered."
+                                                : "To render the defined custom error, the httpErrors element needs to be set to Custom. eg. <httpErrors errorMode=\"Custom\"/>"
+            };
+            return View(model);
+
+        }
+
         public ActionResult NotFound()
         {
             Response.StatusCode = (int)HttpStatusCode.NotFound;
@@ -35,5 +55,29 @@ namespace MvcDemos.Controllers
 
             //throw new NotImplementedException("Pew ^ Pew");
         }
+
+        public ActionResult Test()
+        {
+            throw new InvalidOperationException("This is a test of our error handling.");
+        }
+
+        [Authorize]
+        public ActionResult MustBeAuthorized()
+        {
+            return Content("If you can see this, then you're authorized.");
+        }
+
+        public ActionResult WhatchaTalkinBoutWillis()
+        {
+            // A 403 shouldn't be handled explicitly in the web.config.
+            // Therefore, the defaultRedirect should be used.
+            return new HttpStatusCodeResult(405, "What-cha talkin' bout Willis??");
+        }
+
+        public ActionResult AjaxThrowsAnError()
+        {
+            throw new InvalidOperationException("Oh noes - code went boomski. :sad panda:");
+        }
+
     }
 }
