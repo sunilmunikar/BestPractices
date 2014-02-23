@@ -1,7 +1,6 @@
 ﻿using FluentSecurity;
 using FluentSecurity.Policy;
 using FluentSecurity.TestHelper;
-using System.Linq;
 using MvcDemos;
 using MvcDemos.Controllers;
 using Xunit;
@@ -14,6 +13,8 @@ namespace UnitTests.FluentsecurityDemo
         public void FactMethodName()
         {
             FluentSecurityConfig.SetupFluentSecurity();
+
+            //FluentSecurityConfig.SetupFluentSecurity();
 
             var results = SecurityConfiguration.Current.Verify(expectations =>
                                                                    {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Web;
 using FluentSecurity;
 
-namespace MvcDemos.Core.Providers
+namespace MvcDemos.MvcCore.Providers
 {
     public class SecurityProvider
     {

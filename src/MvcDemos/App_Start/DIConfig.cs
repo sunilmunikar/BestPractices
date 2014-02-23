@@ -1,8 +1,8 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using MvcDemos.Core;
-using MvcDemos.Core.GlobalError;
+using MvcDemos.MvcCore;
+using MvcDemos.MvcCore.GlobalError;
 using MvcDemos.DI;
 using MvcDemos.DI.Unity;
 

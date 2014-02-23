@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\AlbumDto.cs" />
     <Compile Include="Dtos\PaginatedDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\IDto.cs" />
@@ -86,8 +87,17 @@
     <Compile Include="MvcDemosEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleData.cs" />
+    <Compile Include="Services\AlbumService.cs" />
+    <Compile Include="Services\AlbumValidator.cs" />
     <Compile Include="Services\GenreService.cs" />
+    <Compile Include="Services\IAlbumService.cs" />
     <Compile Include="Services\IGenreService.cs" />
+    <Compile Include="Services\Validation\IValidationProvider.cs" />
+    <Compile Include="Services\Validation\IValidator.cs" />
+    <Compile Include="Services\Validation\ValidationException.cs" />
+    <Compile Include="Services\Validation\ValidationProvider.cs" />
+    <Compile Include="Services\Validation\ValidationResult.cs" />
+    <Compile Include="Services\Validation\ValidatorT.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

@@ -15,7 +15,7 @@ using GenericRepository;
 using MvcDemos.Validators;
 using Core.Entities;
 using MvcDemos.ViewModels;
-using MvcDemos.Core;
+using MvcDemos.MvcCore;
 using System.Globalization;
 using System.Threading;
 

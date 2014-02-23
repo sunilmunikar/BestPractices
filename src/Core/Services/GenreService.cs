@@ -12,13 +12,13 @@ namespace Core.Services
     public class GenreService : IGenreService
     {
         private readonly IEntityRepository<Genre> _genreRepository;
-        private readonly IValidator<Genre> _hasPermission;
+        private readonly FluentValidation.IValidator<Genre> _hasPermission;
         private readonly IMappingEngine _mapper;
 
         public GenreService(
             IEntityRepository<Genre> genreRepository
             ,
-            IValidatorFactory validatorFactory
+            FluentValidation.IValidatorFactory validatorFactory
             ,
             IMappingEngine mapper
             )
@@ -45,7 +45,7 @@ namespace Core.Services
         {
             Genre result = _genreRepository.GetSingle(id);
 
-            ValidationResult validationResult = _hasPermission.Validate(result);
+            FluentValidation.Results.ValidationResult validationResult = _hasPermission.Validate(result);
             //_hasPermission.ValidateAndThrow(result);
 
             return result;

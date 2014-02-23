@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace MvcDemos.Core.GlobalError
+namespace MvcDemos.MvcCore.GlobalError
 {
     public class LoggingExceptionFilter : IExceptionFilter
     {

@@ -60,13 +60,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="FluentSecurity">
-      <HintPath>..\..\packages\FluentSecurity.2.0.0\lib\net40\FluentSecurity.dll</HintPath>
+    <Reference Include="FluentSecurity, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\FluentSecurity.2.1.0\lib\net40\FluentSecurity.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation">
+    <Reference Include="FluentValidation, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation.Mvc">
+    <Reference Include="FluentValidation.Mvc, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\FluentValidation.MVC4.5.0.0.1\lib\Net40\FluentValidation.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="GenericRepository">
@@ -213,16 +216,17 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
-    <Compile Include="Core\GlobalError\ErrorHandlingActionInvoker.cs">
+    <Compile Include="DI\Unity\ContainerExtensions\Services.cs" />
+    <Compile Include="MvcCore\GlobalError\ErrorHandlingActionInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\GlobalError\ErrorHandlingControllerFactory.cs">
+    <Compile Include="MvcCore\GlobalError\ErrorHandlingControllerFactory.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\GlobalError\ErrorFilterHelper.cs" />
-    <Compile Include="Core\GlobalError\HandleExceptionFilter.cs" />
-    <Compile Include="Core\GlobalError\ILoggingService.cs" />
-    <Compile Include="Core\GlobalError\LoggingExceptionFilter.cs">
+    <Compile Include="MvcCore\GlobalError\ErrorFilterHelper.cs" />
+    <Compile Include="MvcCore\GlobalError\HandleExceptionFilter.cs" />
+    <Compile Include="MvcCore\GlobalError\ILoggingService.cs" />
+    <Compile Include="MvcCore\GlobalError\LoggingExceptionFilter.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DI\CommonConventions.cs" />
@@ -231,11 +235,11 @@
     <Compile Include="DI\InjectableDependencyResolver.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\MvcDemosContainerExtension.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\MvcSiteMapProviderContainerExtension.cs" />
-    <Compile Include="DI\Unity\ContainerExtensions\UnityValidatorFactory.cs" />
+    <Compile Include="DI\Unity\ContainerExtensions\FluentValidatorFactory.cs" />
     <Compile Include="DI\Unity\UnityDependencyInjectionContainer.cs" />
-    <Compile Include="Core\Providers\SecurityProvider.cs" />
-    <Compile Include="Core\Policies\DefaultPolicyViolationHandler.cs" />
-    <Compile Include="Core\Providers\MyCustomVisibilityProvider.cs" />
+    <Compile Include="MvcCore\Providers\SecurityProvider.cs" />
+    <Compile Include="MvcCore\Policies\DefaultPolicyViolationHandler.cs" />
+    <Compile Include="MvcCore\Providers\MyCustomVisibilityProvider.cs" />
     <Compile Include="DI\Unity\UnityDependencyResolver.cs" />
     <Compile Include="Helpers\CultureHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
@@ -282,6 +286,7 @@
     <Compile Include="Samples\FluentValidation\GenreController.cs" />
     <Compile Include="Samples\MixedHtmlInput\MixedHtmlInputController.cs" />
     <Compile Include="Samples\Security\ParameterTamperingController.cs" />
+    <Compile Include="Samples\ValidationController.cs" />
     <Compile Include="ValidationSummaryJQuery.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
@@ -924,7 +929,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="code\" />
-    <Folder Include="Core\Components\" />
+    <Folder Include="MvcCore\Components\" />
     <Folder Include="Samples\EnumsTemplates\" />
     <Folder Include="Samples\JqGrid\" />
   </ItemGroup>

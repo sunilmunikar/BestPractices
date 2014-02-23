@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MvcSiteMapProvider;
 
-namespace MvcDemos.Core.Providers
+namespace MvcDemos.MvcCore.Providers
 {
     public class MyCustomVisibilityProvider : SiteMapNodeVisibilityProviderBase
     {

@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
 using FluentSecurity;
-using MvcDemos.Core.Providers;
+using MvcDemos.MvcCore.Providers;
 
-namespace MvcDemos.Core.Policies
+namespace MvcDemos.MvcCore.Policies
 {
     public class DefaultPolicyViolationHandler : IPolicyViolationHandler
     {

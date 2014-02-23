@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvcDemos.Core.GlobalError
+namespace MvcDemos.MvcCore.GlobalError
 {
     public interface ILoggingService
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace MvcDemos.Core.GlobalError
+namespace MvcDemos.MvcCore.GlobalError
 {
     //http://blog.ploeh.dk/2009/12/01/GlobalErrorHandlinginASP.NETMVC/
     public class ErrorHandlingActionInvoker :

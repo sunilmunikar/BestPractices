@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace MvcDemos.Core.GlobalError
+namespace MvcDemos.MvcCore.GlobalError
 {
     //http://blog.tonysneed.com/2011/10/21/global-error-handling-in-asp-net-mvc-3-with-ninject/
     internal static class ErrorFilterHelper

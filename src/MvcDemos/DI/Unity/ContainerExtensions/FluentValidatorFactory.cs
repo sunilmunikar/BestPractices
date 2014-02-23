@@ -4,11 +4,11 @@ using Microsoft.Practices.Unity;
 
 namespace MvcDemos.DI.Unity.ContainerExtensions
 {
-    public class UnityValidatorFactory : ValidatorFactoryBase
+    public class FluentValidatorFactory : ValidatorFactoryBase
     {
         private readonly IUnityContainer _container;
 
-        public UnityValidatorFactory(IUnityContainer container)
+        public FluentValidatorFactory(IUnityContainer container)
         {
             _container = container;
         }
