@@ -71,5 +71,9 @@ namespace MvcDemos
 
         }
 
+        protected void Application_Error()
+        {
+            var error = Server.GetLastError();
+        }
     }
 }

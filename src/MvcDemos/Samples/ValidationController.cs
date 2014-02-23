@@ -1,5 +1,6 @@
 ﻿using Core.Dtos;
 using Core.Services;
+using Core.Services.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,31 +13,43 @@ namespace MvcDemos.Samples
     {
         private IAlbumService _albumService;
 
-        public ValidationController()
-        {
-            //_albumService = new AlbumService()
-        }
-
         public ValidationController(IAlbumService albumService)
         {
             _albumService = albumService;
         }
-        //
-        // GET: /Validation/
 
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpPost]
         public ActionResult Index(AlbumDto albumToCreate)
         {
-            //if (!_albumService.CreateAlbum(albumToCreate))
-            //    return View();
+            try
+            {
+                _albumService.CreateAlbum(new AlbumDto() { Price = 101 });
+            }
+            catch (ValidationException ex)
+            {
+                MvcValidationExtension.AddModelErrors(this.ModelState, ex);
+                return View();
+            }
+
 
             return RedirectToAction("Index");
         }
 
+
     }
 
+    public static class MvcValidationExtension
+    {
+        public static void AddModelErrors(this ModelStateDictionary state,
+            ValidationException exception)
+        {
+            foreach (var error in exception.Errors)
+                state.AddModelError(error.Key, error.Message);
+        }
+    }
 }

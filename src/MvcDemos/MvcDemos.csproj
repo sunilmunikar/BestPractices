@@ -216,7 +216,6 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
-    <Compile Include="DI\Unity\ContainerExtensions\Services.cs" />
     <Compile Include="MvcCore\GlobalError\ErrorHandlingActionInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -925,6 +924,7 @@
     <Content Include="Views\Error\Unknown.cshtml" />
     <Content Include="Views\Error\TestError.cshtml" />
     <Content Include="Views\AjaxForm\MockAjaxCall.cshtml" />
+    <Content Include="Views\Validation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,11 +19,14 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
         {
             Container.RegisterType<IEntitiesContext, MvcDemosEntities>();
             Container.RegisterType<IEntityRepository<Genre>, EntityRepository<Genre>>();
+            Container.RegisterType<IEntityRepository<Album>, EntityRepository<Album>>();
 
-            Container.RegisterType<IValidatorFactory, FluentValidatorFactory>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IValidatorFactory, FluentValidatorFactory>();
             Container.RegisterType<IValidator<Genre>, HasPermissionToGet>();
 
             Container.RegisterInstance(Mapper.Engine);
+
+            SetupValidation();
 
             Container.RegisterType<IGenreService, GenreService>();
 
@@ -40,7 +43,7 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
                 return (Core.Services.Validation.IValidator)Container.Resolve(valType);
             };
 
-            Container.RegisterType<IValidationProvider, ValidationProvider>("validatorFactory");
+            Container.RegisterType<IValidationProvider, ValidationProvider>(new InjectionConstructor(validatorFactory));
             Container.RegisterType<Validator<Core.Dtos.AlbumDto>, AlbumValidator>();
         }
 

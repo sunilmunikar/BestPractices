@@ -45,8 +45,8 @@ namespace Core.Services
         {
             Genre result = _genreRepository.GetSingle(id);
 
-            FluentValidation.Results.ValidationResult validationResult = _hasPermission.Validate(result);
-            //_hasPermission.ValidateAndThrow(result);
+            //FluentValidation.Results.ValidationResult validationResult = _hasPermission.Validate(result);
+            _hasPermission.ValidateAndThrow(result);
 
             return result;
         }

@@ -1,0 +1,13 @@
+﻿@model Core.Dtos.AlbumDto
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("ValidationSummary", ViewData.ModelState)
+    
+    @Html.EditorForModel()
+    
+    <button> create Album</button>
+}

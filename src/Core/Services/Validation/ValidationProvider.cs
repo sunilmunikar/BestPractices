@@ -14,8 +14,8 @@ namespace Core.Services.Validation
 
         public void Validate(object model)
         {
-            validatorFactory(model.GetType())
-                .Validate(model).ToArray();
+            var results = validatorFactory(model.GetType()).Validate(model).ToArray();
+            if (results.Length > 0) throw new ValidationException(results);
         }
     }
 }

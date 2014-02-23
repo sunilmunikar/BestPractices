@@ -20,6 +20,7 @@
     <mvcSiteMapNode title="Validation" clickable="false">
       <mvcSiteMapNode title="servier validation" controller="Genre" action="Index"></mvcSiteMapNode>
       <mvcSiteMapNode title="client validation" controller="Genre" action="create"></mvcSiteMapNode>
+      <mvcSiteMapNode title="ServiceLayer validation" controller="Validation" action="Index"></mvcSiteMapNode>
     </mvcSiteMapNode>
 
     <mvcSiteMapNode title="Clientside" clickable="false">

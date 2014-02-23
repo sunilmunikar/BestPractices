@@ -6,19 +6,17 @@ using MvcDemos.DI;
 
 namespace MvcDemos.DI.Unity
 {
-    public class UnityDependencyInjectionContainer
-        : IDependencyInjectionContainer
+    public class UnityDependencyInjectionContainer : IDependencyInjectionContainer
     {
-        public UnityDependencyInjectionContainer(
-            IUnityContainer container
-            )
+        private readonly IUnityContainer container;
+
+        public UnityDependencyInjectionContainer(IUnityContainer container)
         {
             if (container == null)
                 throw new ArgumentNullException("container");
+
             this.container = container;
         }
-
-        private readonly IUnityContainer container;
 
         public object GetInstance(Type type)
         {
@@ -48,7 +46,7 @@ namespace MvcDemos.DI.Unity
 
         public void Release(object instance)
         {
-// Do nothing
+            // Do nothing
         }
     }
 }

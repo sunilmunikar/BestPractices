@@ -7,12 +7,15 @@ namespace Core.Services
 {
     public class AlbumService : IAlbumService
     {
+        private readonly IEntityRepository<Album> _albumRepository;
         private IValidationProvider _validationProvider;
+
         public AlbumService(
             IEntityRepository<Album> albumRepository,
             IValidationProvider validationProvider
             )
         {
+            _albumRepository = albumRepository;
             _validationProvider = validationProvider;
         }
 

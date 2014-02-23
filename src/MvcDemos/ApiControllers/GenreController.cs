@@ -11,7 +11,7 @@ namespace MvcDemos.ApiControllers
 
         //public GenreController()
         //{
-            
+
         //}
 
         public GenreController(IGenreService genreService)
@@ -19,7 +19,7 @@ namespace MvcDemos.ApiControllers
             _genreService = genreService;
         }
 
-         //GET api/<controller>
+        //GET api/<controller>
         public PaginatedDto<GenreDto> GetAll()
         {
             PaginatedDto<GenreDto> result = _genreService.GetGenres(1, 1);
@@ -29,7 +29,14 @@ namespace MvcDemos.ApiControllers
         // GET api/<controller>/5
         public Genre Get(int id)
         {
-            return _genreService.GetGenre(id);
+            try
+            {
+                return _genreService.GetGenre(id);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
         }
 
         // POST api/<controller>

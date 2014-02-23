@@ -10,7 +10,7 @@ namespace MvcDemos.App_Start
         public static void PreStart()
         {
             // Register the custom error handling module.
-            DynamicModuleUtility.RegisterModule(typeof (CustomErrorHandlingModule));
+            DynamicModuleUtility.RegisterModule(typeof(CustomErrorHandlingModule));
         }
     }
 }
