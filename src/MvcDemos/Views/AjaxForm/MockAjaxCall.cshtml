@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "MockAjaxCall";
+}
+
+<h2>MockAjaxCall</h2>
+@section scripts{
+
+    <script type="text/javascript" src="~/Scripts/jquery.mockajax.js"></script>
+    <script src="~/app/AjaxForm/mockAjax.js"></script>
+    <script>
+        $(document).ajaxComplete(function (event, xhr, settings) {
+            if (settings.url === "ajax/test.html") {
+                $(".log").text("Triggered ajaxComplete handler. The result is " + xhr.responseText);
+            }
+        });
+
+        $(document).ajaxComplete(function (event, request, settings) {
+            $(".log").append("<li>Request Complete.</li>");
+        });
+
+    </script>
+}
+<div id="messageFromMockedAjax"></div>
+
+<button class="trigger">Trigger ajax</button>
+<div class="result"></div>
+<div class="log"></div>

@@ -33,7 +33,6 @@ namespace MvcDemos.Samples.FluentValidation
                 StartDate = DateTime.Now.AddDays(2),
                 DateToCompareAgainst = DateTime.Now
             };
-            //var model = new GenreEditModel();
 
             return View(model);
         }

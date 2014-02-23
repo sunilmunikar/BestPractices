@@ -40,6 +40,7 @@
       <mvcSiteMapNode title="Enum" controller="EnumLocalizedDropDown" action="Index" ></mvcSiteMapNode>
       <mvcSiteMapNode title="Localization" controller="Localization" action="Index" ></mvcSiteMapNode>
       <mvcSiteMapNode title="Error handling" controller="Error" action="TestError" >  </mvcSiteMapNode>
+      <mvcSiteMapNode title="Mock ajax" controller="AjaxForm" action="MockAjaxCall" >  </mvcSiteMapNode>
     </mvcSiteMapNode>
     
   </mvcSiteMapNode>

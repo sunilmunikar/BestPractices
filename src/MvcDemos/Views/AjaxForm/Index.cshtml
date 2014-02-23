@@ -9,11 +9,37 @@
 
     <script>
         $(function () {
+            $(document).ajaxStart(function () {
+                $(".log").text("Triggered ajaxStart handler.");
+            });
+            $(document).ajaxError(function () {
+                $(".log").text("Triggered ajaxError handler.");
+            });
+            $(document).ajaxError(function () {
+                $(".log").text("Triggered ajaxError handler.");
+            });
+            //setup ajax error handling
+            $.ajaxSetup({
+                error: function (x, status, error) {
+                    if (x.status == 403) {
+                        alert("Sorry, your session has expired. Please login again to continue");
+                        window.location.href = "/Account/Login";
+                    }
+                    else {
+                        alert("An error occurred: " + status + "nError: " + error);
+                    }
+                }
+            });
+
             //index.init();
             $("#open").on("click", function () {
                 JqueryDialog("", function () {
                     $("body").css("background-color", "salmon");
                 });
+            });
+
+            $("#abortAjax").on("click", function myfunction(x) {
+                xhr.abort();
             });
         });
     </script>
@@ -23,9 +49,13 @@
 
 <h2>Parent page</h2>
 
-<button id="create-user">Create</button>
+<button class="trigger">Trigger</button>
+<div class="result"></div>
+<div class="log"></div>
 
+<button id="create-user">Create</button>
 <button class="k-button" id="open">show</button>
+<button id="abortAjax">Abort ajax call</button>
 
 <div id="dialog-form" title="Create new genre">
     @{ Html.RenderPartial("_Create"); }

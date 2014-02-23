@@ -849,6 +849,7 @@
     <Content Include="Scripts\jquery.globalize\globalize.js" />
     <Content Include="Scripts\jquery.jqGrid.js" />
     <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.mockajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -918,6 +919,7 @@
     <Content Include="Views\Error\500.cshtml" />
     <Content Include="Views\Error\Unknown.cshtml" />
     <Content Include="Views\Error\TestError.cshtml" />
+    <Content Include="Views\AjaxForm\MockAjaxCall.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

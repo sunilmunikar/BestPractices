@@ -30,7 +30,6 @@ namespace MvcDemos
             Database.SetInitializer(new SampleData());
 
             AreaRegistration.RegisterAllAreas();
-            ModelMetadataProviders.Current = new CustomModelMetadataProvider();
 
             FluentSecurityConfig.SetupFluentSecurity();
 
