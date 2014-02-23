@@ -1,4 +1,12 @@
 ﻿<h2>Index</h2>
 <p>
-    @Html.ActionLink("Create New", "Create");
+    @Html.ActionLink("Create New", "Create")
 </p>
+
+
+@using (Html.BeginForm("GetGenreById", "Genre"))
+{
+    @Html.Partial("ValidationSummary", ViewData.ModelState)
+    @Html.TextBox("id", 1)
+    <button> Get genre - invokes fluent validation at service layer</button>
+}

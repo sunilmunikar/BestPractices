@@ -5,8 +5,9 @@ using Core.Entities;
 using Core.Services;
 using MvcDemos.ViewModels;
 using System.Web.Mvc;
+using FluentValidation;
 
-namespace MvcDemos.Samples.FluentValidation
+namespace MvcDemos.Samples
 {
     public class GenreController : Controller
     {
@@ -49,6 +50,21 @@ namespace MvcDemos.Samples.FluentValidation
             _genreService.Add(genre);
 
             return View(model);
+        }
+
+        [HttpPost]
+        public ViewResult GetGenreById(int? id)
+        {
+            try
+            {
+                this._genreService.GetGenre(id.Value);
+            }
+            catch (ValidationException ex)
+            {
+                MvcValidationExtension.AddModelErrors(this.ModelState, ex);
+                return View("Index");
+            }
+            return View("Index");
         }
 
         public JsonResult GetGenre(int? id)

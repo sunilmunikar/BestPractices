@@ -36,20 +36,9 @@ namespace MvcDemos.Samples
                 return View();
             }
 
-
             return RedirectToAction("Index");
         }
 
-
     }
 
-    public static class MvcValidationExtension
-    {
-        public static void AddModelErrors(this ModelStateDictionary state,
-            ValidationException exception)
-        {
-            foreach (var error in exception.Errors)
-                state.AddModelError(error.Key, error.Message);
-        }
-    }
 }

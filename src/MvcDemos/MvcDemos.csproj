@@ -282,8 +282,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samples\LocalizationController.cs" />
     <Compile Include="Samples\EnumLocalizedDropDown\EnumLocalizedDropDownController.cs" />
-    <Compile Include="Samples\FluentValidation\GenreController.cs" />
+    <Compile Include="Samples\Validation\GenreController.cs" />
     <Compile Include="Samples\MixedHtmlInput\MixedHtmlInputController.cs" />
+    <Compile Include="Samples\MvcValidationExtension.cs" />
     <Compile Include="Samples\Security\ParameterTamperingController.cs" />
     <Compile Include="Samples\ValidationController.cs" />
     <Compile Include="ValidationSummaryJQuery.cs" />
