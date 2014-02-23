@@ -5,6 +5,7 @@ using System.Web.Mvc;
 
 namespace MvcDemos.Validators
 {
+    //http://kevww.wordpress.com/category/programming/c/
     public class RequiredIfTrueAttribute : ValidationAttribute, IClientValidatable
     {
         public string BooleanPropertyName { get; set; }
