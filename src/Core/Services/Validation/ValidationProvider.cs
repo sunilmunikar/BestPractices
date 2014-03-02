@@ -5,16 +5,18 @@ namespace Core.Services.Validation
 {
     public class ValidationProvider : IValidationProvider
     {
-        private Func<Type, IValidator> validatorFactory;
+        private Func<Type, IValidator> _validatorFactory;
 
         public ValidationProvider(Func<Type, IValidator> validatorFactory)
         {
-            this.validatorFactory = validatorFactory;
+            _validatorFactory = validatorFactory;
         }
 
         public void Validate(object model)
         {
-            var results = validatorFactory(model.GetType()).Validate(model).ToArray();
+            IValidator validator = _validatorFactory(model.GetType());
+            var results = validator.Validate(model).ToArray();
+
             if (results.Length > 0) throw new ValidationException(results);
         }
     }

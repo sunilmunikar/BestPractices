@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Core.Services.Validation.ValidationException">
+    <Position X="0.75" Y="0.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Validation\ValidationException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Services.Validation.ValidationProvider" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Services\Validation\ValidationProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Core.Services.Validation.ValidationResult">
+    <Position X="0.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\Validation\ValidationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Services.Validation.Validator&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="3.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Validation\ValidatorT.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Core.Services.AlbumValidator">
+    <Position X="9.75" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AlbumValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Core.Services.Validation.IValidator">
+    <Position X="0.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Validation\IValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Core.Services.Validation.IValidationProvider">
+    <Position X="4.75" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Validation\IValidationProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

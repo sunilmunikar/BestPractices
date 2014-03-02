@@ -31,8 +31,6 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
             Container.RegisterType<IGenreService, GenreService>();
 
             Container.RegisterType<IAlbumService, AlbumService>();
-
-
         }
 
         private void SetupValidation()
@@ -46,20 +44,16 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
             Container.RegisterType<IValidationProvider, ValidationProvider>(new InjectionConstructor(validatorFactory));
             Container.RegisterType<Validator<Core.Dtos.AlbumDto>, AlbumValidator>();
         }
+    }
 
-        //public class MyValidatorFactory : ValidatorFactoryBase
-        //{
-        //    private readonly IUnityContainer _container;
+    public abstract class ValidatorFactoryBase
+    {
+        public Core.Services.Validation.IValidator GetValidator(Type type)
+        {
+            var genericType = typeof(IValidator<>).MakeGenericType(type);
+            return CreateInstance(genericType);
+        }
 
-        //    public MyValidatorFactory(IUnityContainer container)
-        //    {
-        //        _container = container;
-        //    }
-
-        //    public override Core.Services.IValidator CreateInstance(Type validatorType)
-        //    {
-        //        return _container.Resolve(validatorType) as IValidator;
-        //    }
-        //}
+        public abstract Core.Services.Validation.IValidator CreateInstance(Type genericType);
     }
 }

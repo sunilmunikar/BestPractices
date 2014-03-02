@@ -4,7 +4,7 @@ using Microsoft.Practices.Unity;
 
 namespace MvcDemos.DI.Unity.ContainerExtensions
 {
-    public class FluentValidatorFactory : ValidatorFactoryBase
+    public class FluentValidatorFactory : FluentValidation.ValidatorFactoryBase
     {
         private readonly IUnityContainer _container;
 
