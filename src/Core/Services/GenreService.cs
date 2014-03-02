@@ -6,6 +6,7 @@ using FluentValidation;
 using FluentValidation.Results;
 using GenericRepository;
 using GenericRepository.EntityFramework;
+using System.Linq;
 
 namespace Core.Services
 {
@@ -32,6 +33,24 @@ namespace Core.Services
         {
             return _genreRepository.GetAll();
         }
+
+        public IEnumerable<GenreDto> GetGenreDtos()
+        {
+            IQueryable<Genre> data = _genreRepository.GetAll();
+
+            var result = new List<GenreDto>();
+
+            //return _mapper.Map<IQueryable<Genre>, IEnumerable<GenreDto>>(data);
+            //var result = data.Select(genre => _mapper.Map<Genre, GenreDto>(genre));
+
+            foreach (var genre in data)
+            {
+                result.Add(_mapper.Map<Genre, GenreDto>(genre));
+            }
+
+            return result;
+        }
+
 
         public PaginatedDto<GenreDto> GetGenres(int pageIndex, int pageSize)
         {
@@ -71,5 +90,6 @@ namespace Core.Services
             _genreRepository.Delete(genre);
             _genreRepository.Save();
         }
+
     }
 }
