@@ -67,7 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\ICommandHandler.cs" />
+    <Compile Include="Command\ChangeTaskStatusCommand.cs" />
+    <Compile Include="CommandHandler\ChangeTaskStatusCommandHandler.cs" />
+    <Compile Include="Cqrs\ICommand.cs" />
+    <Compile Include="Cqrs\ICommandHandler.cs" />
     <Compile Include="Dtos\AlbumDto.cs" />
     <Compile Include="Dtos\PaginatedDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
@@ -102,8 +105,6 @@
     <Compile Include="Services\Validation\ValidatorT.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CommandHandler\" />
-    <Folder Include="Cqrs\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>

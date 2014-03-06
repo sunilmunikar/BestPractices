@@ -1,31 +1,11 @@
-﻿using Core.Entities;
+using Core.Entities;
 using GenericRepository.EntityFramework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Core.Command
 {
-    public interface ICommand
-    {
-
-    }
-
-    public interface ICommandHandler<TCommand>
-    {
-        void Handle(TCommand command);
-    }
-
-    public class ChangeTaskStatusCommand : ICommand
-    {
-        public string TaskId { get; set; }
-        public bool IsCompleted { get; set; }
-        public DateTime UpdatedOn { get; set; }
-    }
-
     public class ChangeTaskStatusCommandHandler
-        : ICommandHandler<ChangeTaskStatusCommand>
+       : ICommandHandler<ChangeTaskStatusCommand>
     {
         private readonly IEntityRepository<Task> _db;
 
