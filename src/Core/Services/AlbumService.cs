@@ -21,8 +21,8 @@ namespace Core.Services
 
         public void CreateAlbum(AlbumDto dto)
         {
-            ValidateAlbum(dto);
-
+            //ValidateAlbum(dto);
+            _validationProvider.Validate(dto);
         }
 
         private void ValidateAlbum(AlbumDto albumToValidate)

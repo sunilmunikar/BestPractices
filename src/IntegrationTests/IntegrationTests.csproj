@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandler\ChangeTaskStatusCommandHandlerTests.cs" />
     <Compile Include="InitializeEFTests.cs" />
     <Compile Include="DatabaseSeedingInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

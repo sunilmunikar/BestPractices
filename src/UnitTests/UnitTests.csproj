@@ -129,6 +129,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Command\ChangeTaskStatusCommandHandlerTests.cs" />
     <Compile Include="Core\Handlers\Genre\HasPermissionToGetTests.cs" />
     <Compile Include="Builders\GenreServiceBuilder.cs" />
     <Compile Include="Core\Services\GenreServiceTests.cs" />

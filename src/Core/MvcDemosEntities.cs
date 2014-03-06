@@ -8,5 +8,6 @@ namespace Core
         public MvcDemosEntities() : base("DefaultConnection") { }
 
         public IDbSet<Entities.Genre> Genres { get; set; }
+
     }
 }

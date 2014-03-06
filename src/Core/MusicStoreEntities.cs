@@ -12,7 +12,7 @@ namespace Core
         public MusicStoreEntities()
             : base("DefaultConnection")
         {
-    
+
         }
 
         public IDbSet<Album> Albums { get; set; }
@@ -21,5 +21,6 @@ namespace Core
         public IDbSet<Cart> Carts { get; set; }
         public IDbSet<Order> Orders { get; set; }
         public IDbSet<OrderDetail> OrderDetails { get; set; }
+        public IDbSet<Task> Tasks { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace IntegrationTests
         private void ReCreateDatabaseForTesting()
         {
             Database.SetInitializer(new DatabaseSeedingInitializer());
-            using (var context = new MvcDemosEntities())
+            using (var context = new MusicStoreEntities())
             {
                 context.Database.Initialize(true);
             }
