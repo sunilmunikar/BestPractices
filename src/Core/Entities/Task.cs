@@ -7,7 +7,7 @@ namespace Core.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public bool IsCompleted;
-        public DateTime LastUpdated;
+        public bool IsCompleted { get; set; }
+        public DateTime LastUpdated { get; set; }
     }
 }

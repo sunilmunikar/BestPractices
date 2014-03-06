@@ -67,10 +67,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\ChangeTaskStatusCommand.cs" />
-    <Compile Include="CommandHandler\ChangeTaskStatusCommandHandler.cs" />
+    <Compile Include="Cqrs\Command\ChangeTaskStatusCommand.cs" />
+    <Compile Include="Cqrs\CommandHandler\ChangeTaskStatusCommandHandler.cs" />
     <Compile Include="Cqrs\ICommand.cs" />
     <Compile Include="Cqrs\ICommandHandler.cs" />
+    <Compile Include="Cqrs\IQuery.cs" />
+    <Compile Include="Cqrs\IQueryHandler.cs" />
+    <Compile Include="Cqrs\IQueryResult.cs" />
+    <Compile Include="Cqrs\Query\TasksByStatusQuery.cs" />
+    <Compile Include="Cqrs\QueryHandler\TasksByStatusQueryHandler.cs" />
+    <Compile Include="Cqrs\QueryResult\TasksByStatusQueryResult.cs" />
     <Compile Include="Dtos\AlbumDto.cs" />
     <Compile Include="Dtos\PaginatedDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
