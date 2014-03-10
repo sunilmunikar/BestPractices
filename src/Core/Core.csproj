@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cqrs\CommandHandler\ChangeTaskStatusCommandValidator.cs" />
     <Compile Include="Cqrs\Command\ChangeTaskStatusCommand.cs" />
     <Compile Include="Cqrs\CommandHandler\ChangeTaskStatusCommandHandler.cs" />
     <Compile Include="Cqrs\ICommand.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Cqrs\Query\TasksByStatusQuery.cs" />
     <Compile Include="Cqrs\QueryHandler\TasksByStatusQueryHandler.cs" />
     <Compile Include="Cqrs\QueryResult\TasksByStatusQueryResult.cs" />
+    <Compile Include="Cqrs\ValidationCommandHandlerDecorator.cs" />
     <Compile Include="Dtos\AlbumDto.cs" />
     <Compile Include="Dtos\PaginatedDto.cs" />
     <Compile Include="Dtos\GenreDto.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Services\IGenreService.cs" />
     <Compile Include="Services\Validation\IValidationProvider.cs" />
     <Compile Include="Services\Validation\IValidator.cs" />
+    <Compile Include="Services\Validation\IValidatorin.cs" />
     <Compile Include="Services\Validation\ValidationException.cs" />
     <Compile Include="Services\Validation\ValidationProvider.cs" />
     <Compile Include="Services\Validation\ValidationResult.cs" />

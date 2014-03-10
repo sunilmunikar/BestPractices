@@ -22,7 +22,7 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
             Container.RegisterType<IEntityRepository<Album>, EntityRepository<Album>>();
 
             Container.RegisterType<IValidatorFactory, FluentValidatorFactory>();
-            Container.RegisterType<IValidator<Genre>, HasPermissionToGet>();
+            Container.RegisterType<FluentValidation.IValidator<Genre>, HasPermissionToGet>();
 
             Container.RegisterInstance(Mapper.Engine);
 
@@ -50,7 +50,7 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
     {
         public Core.Services.Validation.IValidator GetValidator(Type type)
         {
-            var genericType = typeof(IValidator<>).MakeGenericType(type);
+            var genericType = typeof(Core.Services.Validation.IValidator<>).MakeGenericType(type);
             return CreateInstance(genericType);
         }
 

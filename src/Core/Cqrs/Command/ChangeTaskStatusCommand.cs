@@ -4,7 +4,7 @@ namespace Core.Command
 {
     public class ChangeTaskStatusCommand : ICommand
     {
-        public string TaskId { get; set; }
+        public int TaskId { get; set; }
 
         public bool IsCompleted { get; set; }
 

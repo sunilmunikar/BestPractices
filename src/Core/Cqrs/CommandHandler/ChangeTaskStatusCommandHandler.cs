@@ -7,6 +7,7 @@ namespace Core.Command
     public class ChangeTaskStatusCommandHandler
        : ICommandHandler<ChangeTaskStatusCommand>
     {
+        //COMMENT sunil : expecting UOW here rather than repository
         private readonly IEntityRepository<Task> _db;
 
         public ChangeTaskStatusCommandHandler(IEntityRepository<Task> db)
@@ -15,7 +16,7 @@ namespace Core.Command
             _db = db;
         }
 
-        public virtual void Handle(ChangeTaskStatusCommand command)
+        public void Handle(ChangeTaskStatusCommand command)
         {
             if (command == null) throw new ArgumentException("command");
 
