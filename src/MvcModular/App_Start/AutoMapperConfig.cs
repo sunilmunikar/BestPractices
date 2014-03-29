@@ -1,15 +1,15 @@
-﻿using MvcDemos.App_Start;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AutoMapper;
 using System.Reflection;
 using My.Framework.Infrastructure;
+using MvcModular;
 
 [assembly: WebActivatorEx.PostApplicationStartMethod(typeof(AutoMapperConfig), "Register")]
 
-namespace MvcDemos.App_Start
+namespace MvcModular
 {
     public class AutoMapperConfig
     {

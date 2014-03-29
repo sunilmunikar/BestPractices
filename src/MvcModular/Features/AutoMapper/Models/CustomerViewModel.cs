@@ -6,20 +6,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcDemos.Samples
+namespace MvcModular.Features.AutoMapper.Models
 {
-    public class PersonViewModel : IMapFrom<Person>
-    {
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-    }
-
     public class CustomerViewModel : IHaveCustomMappings
     {
         public string FullName { get; set; }
 
-        public void CreateMappings(AutoMapper.IConfiguration configuration)
+        public void CreateMappings(IConfiguration configuration)
         {
             configuration.CreateMap<Person, CustomerViewModel>()
                 .ForMember(m => m.FullName, opt =>

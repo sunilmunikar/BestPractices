@@ -41,6 +41,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,9 +114,17 @@
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="Controllers\SomeFeatureController.cs" />
+    <Compile Include="Features\AutoMapper\AutoMapperController.cs" />
+    <Compile Include="Features\AutoMapper\Models\CustomerViewModel.cs" />
+    <Compile Include="Features\AutoMapper\Person.cs" />
+    <Compile Include="Features\AutoMapper\Models\PersonViewModel.cs" />
     <Compile Include="Features\SomeFeature\IndexValidator.cs" />
     <Compile Include="Features\SomeFeature\IndexViewModel.cs" />
     <Compile Include="FeatureViewLocationRazorViewEngine.cs" />
@@ -124,6 +138,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll">
+      <Link>AutoMapper.Net4.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -136,7 +154,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -146,6 +163,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Features\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\AutoMapper\Views\CustomMapping.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\AutoMapper\Views\SimpleMapping.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\My.Framework\My.Framework.csproj">
+      <Project>{f30dca11-1cdc-4980-875f-2edc3ddeff03}</Project>
+      <Name>My.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

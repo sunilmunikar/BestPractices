@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using MvcModular.Features.AutoMapper.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MvcDemos.Samples
+namespace MvcModular.Features.AutoMapper
 {
     public class AutoMapperController : Controller
     {
@@ -15,8 +16,6 @@ namespace MvcDemos.Samples
             var personVm = new PersonViewModel();
 
             Mapper.Map(person, personVm);
-
-            //personVm.FullName = string.Format("{0} {1}", person.FirstName, person.LastName);
 
             return View(personVm);
         }
@@ -32,8 +31,5 @@ namespace MvcDemos.Samples
         }
 
     }
-
-
-
 
 }

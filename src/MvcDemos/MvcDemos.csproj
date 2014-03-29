@@ -48,13 +48,13 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper, Version=3.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+    <Reference Include="AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\AutoMapper.3.1.0\lib\net40\AutoMapper.dll</HintPath>
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper.Net4, Version=3.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+    <Reference Include="AutoMapper.Net4, Version=3.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\AutoMapper.3.1.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <HintPath>..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -217,7 +217,6 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
-    <Compile Include="Infrastructure\IMapFrom.cs" />
     <Compile Include="MvcCore\GlobalError\ErrorHandlingActionInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -303,6 +302,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="..\..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll">
+      <Link>AutoMapper.Net4.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="app\AjaxForm\mockAjax.js" />
     <Content Include="app\JqgridDemo\jqgridDemoModule.js" />
     <Content Include="Content\bootstrap-responsive.css" />
@@ -969,7 +972,7 @@
       <Name>My.Framework.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\My.Framework\My.Framework.csproj">
-      <Project>{F30DCA11-1CDC-4980-875F-2EDC3DDEFF03}</Project>
+      <Project>{f30dca11-1cdc-4980-875f-2edc3ddeff03}</Project>
       <Name>My.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
