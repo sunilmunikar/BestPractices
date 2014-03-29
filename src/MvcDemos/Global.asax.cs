@@ -18,6 +18,7 @@ using MvcDemos.ViewModels;
 using MvcDemos.MvcCore;
 using System.Globalization;
 using System.Threading;
+using MvcDemos.App_Start;
 
 namespace MvcDemos
 {
