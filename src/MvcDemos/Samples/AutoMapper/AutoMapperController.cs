@@ -12,11 +12,7 @@ namespace MvcDemos.Samples
         public ActionResult SimpleMapping()
         {
             var person = new Person() { FirstName = "Sunil", LastName = "Munikar" };
-            var personVm = new PersonViewModel();
-
-            Mapper.Map(person, personVm);
-
-            //personVm.FullName = string.Format("{0} {1}", person.FirstName, person.LastName);
+            PersonViewModel personVm = Mapper.Map<Person, PersonViewModel>(person);
 
             return View(personVm);
         }
@@ -24,9 +20,7 @@ namespace MvcDemos.Samples
         public ActionResult CustomMapping()
         {
             var person = new Person() { FirstName = "Sunil", LastName = "Munikar" };
-            var customerVm = new CustomerViewModel();
-
-            Mapper.Map(person, customerVm);
+            CustomerViewModel customerVm = Mapper.Map<Person, CustomerViewModel>(person);
 
             return View(customerVm);
         }

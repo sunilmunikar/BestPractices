@@ -6,10 +6,11 @@ using Core.Services;
 using MvcDemos.ViewModels;
 using System.Web.Mvc;
 using FluentValidation;
+using MvcDemos.Samples.Validation;
 
 namespace MvcDemos.Samples
 {
-    public class GenreController : Controller
+    public class GenreController : ValidationBaseController
     {
         private readonly IGenreService _genreService;
 
@@ -53,16 +54,24 @@ namespace MvcDemos.Samples
         }
 
         [HttpPost]
-        public ViewResult GetGenreById(int? id)
+        public ActionResult GetGenreById(int? id)
         {
-            try
+            //try
+            //{
+            //    this._genreService.GetGenre(id.Value);
+            //}
+            //catch (ValidationException ex)
+            //{
+            //    MvcValidationExtension.AddModelErrors(this.ModelState, ex);
+            //    //return View("Index");
+            //}
+
+            //Note : try catch is replaced by using customActionInvoker ValidationExceptionHandlingActionInvoker
+
+            if (ModelState.IsValid)
             {
                 this._genreService.GetGenre(id.Value);
-            }
-            catch (ValidationException ex)
-            {
-                MvcValidationExtension.AddModelErrors(this.ModelState, ex);
-                return View("Index");
+                return RedirectToAction("Index");
             }
             return View("Index");
         }

@@ -286,11 +286,14 @@
     <Compile Include="Samples\AutoMapper\PersonViewModel.cs" />
     <Compile Include="Samples\LocalizationController.cs" />
     <Compile Include="Samples\EnumLocalizedDropDown\EnumLocalizedDropDownController.cs" />
+    <Compile Include="Samples\Validation\MyCustomValidationExceptionHandlingActionInvoker.cs" />
+    <Compile Include="Samples\Validation\ValidationBaseController.cs" />
+    <Compile Include="Samples\Validation\FluentValidationExceptionHandlingActionInvoker.cs" />
     <Compile Include="Samples\Validation\GenreController.cs" />
     <Compile Include="Samples\MixedHtmlInput\MixedHtmlInputController.cs" />
-    <Compile Include="Samples\MvcValidationExtension.cs" />
+    <Compile Include="Samples\Validation\MvcValidationExtension.cs" />
     <Compile Include="Samples\Security\ParameterTamperingController.cs" />
-    <Compile Include="Samples\ValidationController.cs" />
+    <Compile Include="Samples\Validation\ValidationController.cs" />
     <Compile Include="ValidationSummaryJQuery.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
