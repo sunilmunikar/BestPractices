@@ -184,9 +184,6 @@
     <Reference Include="WebGrease">
       <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="WorldDomination.Web.Mvc">
-      <HintPath>..\..\packages\MagicalUnicorn.MvcErrorToolkit.2.2.2\lib\net40\WorldDomination.Web.Mvc.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiControllers\GenreController.cs" />
@@ -973,6 +970,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\WorldDomination.Web.Mvc.ErrorHandling\Code\WorldDomination.Web.Mvc\WorldDomination.Web.Mvc.csproj">
+      <Project>{1f68ced2-431d-4d65-b4e9-c94c103e04ef}</Project>
+      <Name>WorldDomination.Web.Mvc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\My.Framework.Web\My.Framework.Web.csproj">
       <Project>{9d764377-4ddc-41fa-b85e-e0591700692a}</Project>
       <Name>My.Framework.Web</Name>
