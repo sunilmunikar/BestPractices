@@ -1,0 +1,44 @@
+﻿<h2>Index</h2>
+<table id="list1"></table>
+<div id="pager1"></div>
+
+<table id="list2"></table>
+<div id="pager2"></div>
+
+@section scripts{
+    @Scripts.Render("~/app/JqgridDemo/jqgridDemoModule.js")
+    <script>
+        $(function () {
+            window.jqGridDemoModule.init('@Url.Action("GetData", "JqGridDemo")');
+        });
+
+        //jQuery().ready(function () {
+        //    jQuery("#list1").jqGrid({
+        //        url: '/JqGridDemo/GetData',
+        //        datatype: "json",
+        //        colNames: ['id', 'Notes'],
+        //        colModel: [{
+        //            name: 'id',
+        //            index: 'id',
+        //            width: 75
+        //        }, {
+        //            name: 'note',
+        //            index: 'note',
+        //            width: 150,
+        //            sortable: false
+        //        }],
+        //        rowNum: 10,
+        //        autowidth: true,
+        //        rowList: [10, 20, 30],
+        //        pager: jQuery('#pager1'),
+        //        sortname: 'id',
+        //        viewrecords: true,
+        //        sortorder: "desc",
+        //        caption: "XML Example"
+        //    }).navGrid('#pager1', { edit: false, add: false, del: false });
+        //});
+
+    </script>
+
+}
+

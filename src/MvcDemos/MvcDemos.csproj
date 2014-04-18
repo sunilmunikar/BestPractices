@@ -210,12 +210,18 @@
     <Compile Include="Areas\SecurityGuard\Models\UserViewModel.cs" />
     <Compile Include="Areas\SecurityGuard\SecurityGuardAreaRegistration.cs" />
     <Compile Include="App_Start\FluentSecurityConfig.cs" />
+    <Compile Include="code\IBusinessService.cs" />
+    <Compile Include="code\StrategyFactory.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="Infrastructure\ActionFilter\HandleRecordNotFoundAttribute.cs" />
     <Compile Include="Infrastructure\ActionResult\ResourceNotFoundResult.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
+    <Compile Include="MvcCore\Components\CoreController.cs" />
+    <Compile Include="MvcCore\CustomModelMetadataProvider.cs" />
     <Compile Include="MvcCore\GlobalError\ErrorHandlingActionInvoker.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -236,6 +242,8 @@
     <Compile Include="DI\Unity\ContainerExtensions\MvcSiteMapProviderContainerExtension.cs" />
     <Compile Include="DI\Unity\ContainerExtensions\FluentValidatorFactory.cs" />
     <Compile Include="DI\Unity\UnityDependencyInjectionContainer.cs" />
+    <Compile Include="MvcCore\Policies\DenyAccessPolicyViolationHandler.cs" />
+    <Compile Include="MvcCore\Policies\LocalOnlyPolicy.cs" />
     <Compile Include="MvcCore\Providers\SecurityProvider.cs" />
     <Compile Include="MvcCore\Policies\DefaultPolicyViolationHandler.cs" />
     <Compile Include="MvcCore\Providers\MyCustomVisibilityProvider.cs" />
@@ -283,6 +291,8 @@
     <Compile Include="Samples\AutoMapper\AutoMapperController.cs" />
     <Compile Include="Samples\AutoMapper\Person.cs" />
     <Compile Include="Samples\AutoMapper\PersonViewModel.cs" />
+    <Compile Include="Samples\EnumsTemplates\MovieGenreController.cs" />
+    <Compile Include="Samples\JqGrid\JqGridDemoController.cs" />
     <Compile Include="Samples\LocalizationController.cs" />
     <Compile Include="Samples\EnumLocalizedDropDown\EnumLocalizedDropDownController.cs" />
     <Compile Include="Samples\UnknownRecordController.cs" />
@@ -874,6 +884,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Views\Install\Index.aspx" />
+    <Content Include="Views\JqGridDemo\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\MovieGenre\Index.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -912,7 +926,6 @@
     <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
-    <Content Include="Views\JqGridDemo\Index.cshtml" />
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Shared\ValidationSummary.cshtml" />
     <Content Include="Views\MixedHtmlInput\Index.cshtml" />
@@ -927,7 +940,6 @@
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\BootstrapMenuHelperModel.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
-    <Content Include="Views\MovieGenre\Index.cshtml" />
     <Content Include="Views\EnumLocalizedDropDown\Index.cshtml" />
     <Content Include="Views\Localization\Index.cshtml" />
     <Content Include="Views\Error\401.cshtml" />
@@ -942,10 +954,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="code\" />
-    <Folder Include="MvcCore\Components\" />
-    <Folder Include="Samples\EnumsTemplates\" />
-    <Folder Include="Samples\JqGrid\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\Index.cshtml" />
