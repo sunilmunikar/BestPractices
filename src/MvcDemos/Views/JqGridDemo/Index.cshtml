@@ -6,7 +6,7 @@
 <div id="pager2"></div>
 
 @section scripts{
-    @Scripts.Render("~/app/JqgridDemo/jqgridDemoModule.js")
+    @Scripts.Render("~/Views/JqgridDemo/jqgridDemoModule.js")
     <script>
         $(function () {
             window.jqGridDemoModule.init('@Url.Action("GetData", "JqGridDemo")');
