@@ -57,6 +57,7 @@
     <Compile Include="Extension\StringBuilerExtension.cs" />
     <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Filtering\GenericQueyOptions.cs" />
+    <Compile Include="Helper\NotNull.cs" />
     <Compile Include="Infrastructure\Mapping\IHaveCustomMappings.cs" />
     <Compile Include="Infrastructure\Mapping\IMapFrom.cs" />
     <Compile Include="Mvc\HtmlHelper\HtmlEnumHelper.cs" />
