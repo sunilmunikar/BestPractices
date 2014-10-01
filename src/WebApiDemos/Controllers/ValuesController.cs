@@ -16,14 +16,18 @@ namespace WebApiDemos.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public string Get(int? id)
         {
-            return "value";
+            if(id == null)
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+
+            return string.Empty;
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post(Team  value)
         {
+
         }
 
         // PUT api/values/5
