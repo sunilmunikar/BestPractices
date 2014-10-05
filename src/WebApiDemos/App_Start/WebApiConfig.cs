@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
 namespace WebApiDemos
 {
     public static class WebApiConfig
     {
-        public static void Register(HttpConfiguration config)
+        public static void Register(HttpConfiguration httpConfiguration)
         {
             // Web API configuration and services
 
             // Web API routes
-            config.MapHttpAttributeRoutes();
+            httpConfiguration.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
+            httpConfiguration.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            httpConfiguration.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());
         }
     }
 }

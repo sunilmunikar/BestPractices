@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace WebApiDemos.Controllers
 {
     public class ValuesController : ApiController
     {
+        public void LogExceptionTest()
+        {
+            throw new NotImplementedException("testing");
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -18,16 +21,15 @@ namespace WebApiDemos.Controllers
         // GET api/values/5
         public string Get(int? id)
         {
-            if(id == null)
+            if (id == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
             return string.Empty;
         }
 
         // POST api/values
-        public void Post(Team  value)
+        public void Post(Team value)
         {
-
         }
 
         // PUT api/values/5
