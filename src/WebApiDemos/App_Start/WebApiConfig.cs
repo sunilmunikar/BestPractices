@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json.Serialization;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using WebApiDemos.ExceptionHandling;
 
 namespace WebApiDemos
 {
@@ -22,6 +21,11 @@ namespace WebApiDemos
             );
 
             httpConfiguration.Services.Add(typeof(IExceptionLogger), new NLogExceptionLogger());
+            httpConfiguration.Services.Add(typeof(IExceptionLogger), new ElmahExceptionLogger());
+            httpConfiguration.Services.Replace(typeof(IExceptionHandler), new ApiExceptionHandler());
+
+            httpConfiguration.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
         }
     }
 }
