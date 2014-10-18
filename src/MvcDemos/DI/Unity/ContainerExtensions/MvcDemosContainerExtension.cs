@@ -26,6 +26,10 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
 
             Container.RegisterInstance(Mapper.Engine);
 
+            Container.RegisterInstance(System.Web.Http.GlobalConfiguration.Configuration);
+
+            //Container.RegisterType<System.Web.Http.HttpConfiguration>();
+
             SetupValidation();
 
             Container.RegisterType<IGenreService, GenreService>();
