@@ -1,5 +1,5 @@
 ﻿
-namespace My.Framework.Mvc.HtmlHelper
+namespace My.Framework.Web.Mvc.HtmlHelper
 {
     class HtmlEnumHelper
     {

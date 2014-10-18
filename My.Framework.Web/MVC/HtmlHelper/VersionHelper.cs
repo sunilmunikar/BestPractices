@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace My.Framework.Mvc.HtmlHelper
+namespace My.Framework.Web.Mvc.HtmlHelper
 {
     public static class VersionHelper
     {

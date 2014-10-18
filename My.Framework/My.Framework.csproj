@@ -60,8 +60,6 @@
     <Compile Include="Helper\NotNull.cs" />
     <Compile Include="Infrastructure\Mapping\IHaveCustomMappings.cs" />
     <Compile Include="Infrastructure\Mapping\IMapFrom.cs" />
-    <Compile Include="Mvc\HtmlHelper\HtmlEnumHelper.cs" />
-    <Compile Include="Mvc\HtmlHelper\VersionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
