@@ -50,7 +50,8 @@ namespace MvcDemos
 
             // NOTE: Remove the following lines if you need .aspx support
             ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new RazorViewEngine());
+            //ViewEngines.Engines.Add(new RazorViewEngine());
+            ViewEngines.Engines.Add(new ModularConventionViewEngine());
 
             MvcHandler.DisableMvcResponseHeader = true;
         }
