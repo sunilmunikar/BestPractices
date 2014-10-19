@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.Mappers;
 using Core;
 using Core.Entities;
 using Core.Handlers;
@@ -28,12 +27,9 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
 
             Container.RegisterInstance(System.Web.Http.GlobalConfiguration.Configuration);
 
-            //Container.RegisterType<System.Web.Http.HttpConfiguration>();
-
             SetupValidation();
 
             Container.RegisterType<IGenreService, GenreService>();
-
             Container.RegisterType<IAlbumService, AlbumService>();
         }
 
@@ -48,16 +44,5 @@ namespace MvcDemos.DI.Unity.ContainerExtensions
             Container.RegisterType<IValidationProvider, ValidationProvider>(new InjectionConstructor(validatorFactory));
             Container.RegisterType<Validator<Core.Dtos.AlbumDto>, AlbumValidator>();
         }
-    }
-
-    public abstract class ValidatorFactoryBase
-    {
-        public Core.Services.Validation.IValidator GetValidator(Type type)
-        {
-            var genericType = typeof(Core.Services.Validation.IValidator<>).MakeGenericType(type);
-            return CreateInstance(genericType);
-        }
-
-        public abstract Core.Services.Validation.IValidator CreateInstance(Type genericType);
     }
 }
