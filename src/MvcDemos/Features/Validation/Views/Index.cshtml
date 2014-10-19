@@ -33,7 +33,6 @@
             </p>
         </div>
     </section>
-    @* ToDo@Sunil: display of validationResultMessage missing *@
     <section class="content-wrapper main-content clear-fix">
         <h2>Create A New Reservation</h2>
         <form id="createReservationForm">
@@ -84,7 +83,7 @@
             $.validator.unobtrusive.parse(form);
             if (form.valid()) {
                 $.ajax({
-                    url: "/api/Reservation/Create",
+                    url: "/api/Reservation/ValidateUserInput",
                     data: $("form").serialize(),
                     type: "POST",
                     statusCode: {
