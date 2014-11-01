@@ -13,6 +13,7 @@ namespace MvcDemos.Validation.Models
 
         public DateTime DateTime { get; set; }
 
+        [Required]
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

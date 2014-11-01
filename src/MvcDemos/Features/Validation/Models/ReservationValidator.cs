@@ -9,8 +9,8 @@ namespace MvcDemos.Validation.Models
         /// </summary>
         public ReservationValidator()
         {
-            RuleFor(item => item.FirstName)
-                .NotEmpty();
+            //RuleFor(item => item.FirstName)
+            //    .NotEmpty();
 
             RuleFor(item => item.LastName)
               .NotEmpty();
