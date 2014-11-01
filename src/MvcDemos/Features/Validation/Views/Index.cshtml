@@ -83,7 +83,7 @@
             $.validator.unobtrusive.parse(form);
             if (form.valid()) {
                 $.ajax({
-                    url: "/api/Reservation/ValidateUserInput",
+                    url: "/api/Reservation/ValidateBusinessRule",
                     data: $("form").serialize(),
                     type: "POST",
                     statusCode: {

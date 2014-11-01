@@ -238,8 +238,9 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
+    <Compile Include="ExceptionHandling\ApiExceptionHandler.cs" />
     <Compile Include="Features\Validation\ActionFilters\CheckModelForNullAttribute.cs" />
-    <Compile Include="Features\Validation\Mvc\ReservationController.cs" />
+    <Compile Include="Features\Validation\Controllers\Mvc\ReservationController.cs" />
     <Compile Include="Infrastructure\ActionFilter\HandleRecordNotFoundAttribute.cs" />
     <Compile Include="Infrastructure\ActionResult\ResourceNotFoundResult.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -334,7 +335,7 @@
     <Compile Include="Features\Validation\Extensions\ObjectExtensions.cs" />
     <Compile Include="Features\Validation\Models\Reservation.cs" />
     <Compile Include="Features\Validation\Models\ReservationValidator.cs" />
-    <Compile Include="Features\Validation\Api\ReservationController.cs" />
+    <Compile Include="Features\Validation\Controllers\Api\ReservationController.cs" />
     <Compile Include="Validators\GenreValidator.cs" />
     <Compile Include="Validators\LessThanOrEqualToFluentValidationPropertyValidator.cs" />
     <Compile Include="Validators\NotEqualPropertyValidator.cs" />
