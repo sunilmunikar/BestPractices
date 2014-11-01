@@ -11,7 +11,7 @@ namespace MvcDemos.Validation.Models
     {
         private readonly IValidator _validator;
 
-        public DateTime DateTime { get; set; }
+        public DateTime Date { get; set; }
 
         [Required]
         public string FirstName { get; set; }
