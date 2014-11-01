@@ -1,60 +1,26 @@
-﻿using System;
+﻿using FluentValidation;
+using MvcDemos.Validation.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using MvcDemos.Validation.Extensions;
-using FluentValidation;
 using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
 
 namespace MvcDemos.Validation.Models
 {
-    /// <summary>
-    /// Simple Domain Object
-    /// </summary>
     public class Reservation : IValidatableObject
     {
-        #region Private Members
-
         private readonly IValidator _validator;
 
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the date time.
-        /// </summary>
-        /// <value>
-        /// The date time.
-        /// </value>
         public DateTime DateTime { get; set; }
-        /// <summary>
-        /// Gets or sets the name.
-        /// </summary>
-        /// <value>
-        /// The name.
-        /// </value>
+
         public string FirstName { get; set; }
-        /// <summary>
-        /// Gets or sets the name.
-        /// </summary>
-        /// <value>
-        /// The name.
-        /// </value>
+
         public string LastName { get; set; }
 
-        #endregion
-
-        #region Constructor
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Reservation" /> class.
-        /// </summary>
         public Reservation()
         {
             _validator = new ReservationValidator();
         }
-
-        #endregion
 
         #region IValidatableObject
 
@@ -71,6 +37,6 @@ namespace MvcDemos.Validation.Models
             return _validator.Validate(this).ToValidationResult();
         }
 
-        #endregion
+        #endregion IValidatableObject
     }
 }

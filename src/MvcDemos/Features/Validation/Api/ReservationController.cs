@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MvcDemos.ActionFilters;
+using MvcDemos.Features.Validation.ActionFilters;
 using MvcDemos.Validation.Models;
 using System.Net;
 using System.Net.Http;
@@ -10,6 +11,7 @@ namespace MvcDemos.Validation.Controllers
     public class ReservationController : ApiController
     {
         [ValidationResponseFilter]
+        [CheckModelForNull]
         [HttpPost]
         [Route("Reservation/ValidateUserInput")]
         public HttpResponseMessage ValidateUserInput(Reservation reservation)
