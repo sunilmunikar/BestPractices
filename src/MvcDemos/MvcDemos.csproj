@@ -240,8 +240,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="ExceptionHandling\ApiExceptionHandler.cs" />
+    <Compile Include="Features\Setting\SettingController.cs" />
     <Compile Include="Features\Validation\ActionFilters\CheckModelForNullAttribute.cs" />
     <Compile Include="Features\Validation\Controllers\Mvc\ReservationController.cs" />
+    <Compile Include="Helpers\JavaScriptHelper.cs" />
     <Compile Include="Infrastructure\ActionFilter\HandleRecordNotFoundAttribute.cs" />
     <Compile Include="Infrastructure\ActionResult\ResourceNotFoundResult.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -521,6 +523,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Features\Setting\Views\Index.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
