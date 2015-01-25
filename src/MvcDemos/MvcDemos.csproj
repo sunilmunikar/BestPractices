@@ -354,6 +354,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="app\AjaxForm\mockAjax.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\user.controller.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\TestClient.css" />
     <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
