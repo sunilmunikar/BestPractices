@@ -4,34 +4,18 @@
     <title></title>
 </head>
 <body ng-app="app">
-    <div ng-controller="User as vm">
-        <form name="signupForm" novalidate
-              ng-submit="vm.submit(signupForm.$valid)">
-            <div>
-                <h1>{{vm.title}}</h1>
-                
-
-                <div class="field name-field">
-                    <input class="input" type="text" name="name" required placeholder="First Name + Last Name"
-                           ng-model="vm.data.name"
-                           ng-model-options="{ updateOn: 'blur' }" 
-                           />
-                    <div ng-if="signupForm.$submitted" ng-messages="signupForm.name.$error" class="errors">
-                        <div ng-message="required">You did not enter your name</div>
-                    </div>
-                </div>
-
-                <nav class="form-actions">
-                    <input type="submit" value="Submit" class="button primary" />
-                </nav>
-            </div>
-        </form>
-    </div>
+    <a href="#/reservation">Reservation</a>
+    <div ui-view></div>
 </body>
 </html>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-<script src="app/app.js"></script>
-<script src="app/user.controller.js"></script>
+<script src="app/app.module.js"></script>
+
+<script src="app/app.route.js"></script>
+
+<script src="app/reservation/reservation.controller.js"></script>
+<script src="app/reservation/reservation.dataservice.js"></script>

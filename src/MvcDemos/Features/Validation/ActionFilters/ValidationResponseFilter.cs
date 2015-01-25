@@ -14,7 +14,6 @@ namespace MvcDemos.ActionFilters
         {
             if (!actionContext.ModelState.IsValid)
             {
-                //actionContext.ModelState.Keys
                 actionContext.Response = actionContext
                         .Request
                         .CreateErrorResponse(HttpStatusCode.BadRequest, actionContext.ModelState);

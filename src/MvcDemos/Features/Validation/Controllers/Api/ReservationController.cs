@@ -57,19 +57,21 @@ namespace MvcDemos.Validation.Controllers.Api
                 return response;
             });
         }
-    }
 
-    public class ReservationValidator : AbstractValidator<Reservation>
-    {
-        public ReservationValidator()
+        [ValidationResponseFilter]
+        [HttpPost]
+        [Route("createReservation")]
+        public HttpResponseMessage CreateReservation(HttpRequestMessage request,
+            [FromBody] ReservationViewModel reservation)
         {
-            RuleFor(x => x.Date).NotNull().GreaterThan(System.DateTime.Today);
+            // add ValidationResponseFilter or use below commented code 
+            // to return the validation error
+            //if (!ModelState.IsValid)
+            //    return Request.CreateResponse(HttpStatusCode.BadRequest, reservation);
 
-            //RuleFor(x => x.DateTime).Must((model, dateTime) =>
-            //{
-            //    // dateTime is in future
-            //    return dateTime >= System.DateTime.Today;
-            //});
+            return Request.CreateResponse(HttpStatusCode.OK, reservation);
         }
     }
+
+
 }

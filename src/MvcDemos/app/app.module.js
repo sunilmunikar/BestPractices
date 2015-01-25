@@ -4,11 +4,12 @@
     angular.module('app', [
         // Angular modules 
         'ngMessages',
-        //'ngRoute'
+        'ui.router'
 
         // Custom modules 
 
         // 3rd Party Modules
-        
+
     ]);
+
 })();
