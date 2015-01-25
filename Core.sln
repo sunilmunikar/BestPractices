@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC6219FD-E6AA-45AE-BC36-E9C200F55401}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,6 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		bower.json = bower.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.Framework.Web", "My.Framework.Web\My.Framework.Web.csproj", "{9D764377-4DDC-41FA-B85E-E0591700692A}"
@@ -41,6 +42,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldDomination.Web.Mvc", "..\WorldDomination.Web.Mvc.ErrorHandling\Code\WorldDomination.Web.Mvc\WorldDomination.Web.Mvc.csproj", "{1F68CED2-431D-4D65-B4E9-C94C103E04EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiDemos", "src\WebApiDemos\WebApiDemos.csproj", "{7D292EF5-57E3-407D-A1DD-AE77D62C5572}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{6C558904-D14A-4722-BC4D-6D6CC6D95744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,8 +104,11 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{1FB62063-D359-420F-9C5A-A4E7A46AB1A3} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
 		{A3A6C1D7-6C15-493D-AA0D-5F5E0959D517} = {D9265313-B202-4602-B36C-F77F60D8839D}
 		{9951DAAE-3F8D-4134-972E-EF20C7728CD4} = {D9265313-B202-4602-B36C-F77F60D8839D}
+		{5D7330F9-5A5D-4D4F-904D-1D5281C6E477} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
+		{7D292EF5-57E3-407D-A1DD-AE77D62C5572} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
