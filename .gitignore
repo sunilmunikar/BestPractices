@@ -30,6 +30,8 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.mdf
 
+bower_components/
+
 #Ignore packages directory
 Packages/
 
