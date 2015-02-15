@@ -5,7 +5,6 @@
         .module('app')
         .factory('ReservationDataService', ReservationDataService);
 
-
     ReservationDataService.$inject = ['$http', '$timeout', '$q']
 
     function ReservationDataService($http, $timeout, $q) {
@@ -33,13 +32,15 @@
                .success(function (data, status, headers, config) {
                    //logger.info('insert(film): http post successful');
                    return data;
-               })
-               .error(function (data, status, headers, config) {
-                   //logger.error(data);
-                   
                });
+            //.error(function (data, status, headers, config) {
+            //    //logger.error(data);
+            //    if (data.errorMessage) {
+            //        console.error("There was a problem saving the issue: \n" + data.errorMessage + "\nPlease try again.");
+            //    } else {
+            //        console.log("There was a problem saving.  Please try again.");
+            //    }
+            //});
         }
-        
     }
-
 })();

@@ -1,15 +1,14 @@
 ﻿<div>
-    <form name="signupForm" novalidate
-          ng-submit="vm.submit(signupForm.$valid)">
+    <form name="reservationForm" novalidate
+          ng-submit="vm.submit(reservationForm.$valid)">
         <div>
             <h1>{{vm.title}}</h1>
-
-
             <div class="field name-field">
-                <input class="input" type="text" name="name" required placeholder="First Name + Last Name"
+                <input class="input" type="text" name="name" placeholder="First Name + Last Name"
+                       required
                        ng-model="vm.reservation.name"
                        ng-model-options="{ updateOn: 'blur' }" />
-                <div ng-if="signupForm.$submitted" ng-messages="signupForm.name.$error" class="errors">
+                <div ng-if="reservationForm.$submitted" ng-messages="reservationForm.name.$error" class="errors">
                     <div ng-message="required">You did not enter your name</div>
                 </div>
             </div>
