@@ -30,7 +30,7 @@ namespace MvcDemos.Helpers
 
         public static IHtmlString Json(this HtmlHelper helper, object obj)
         {
-            var settings = new JsonSerializerSettings
+            var serializerSettings = new JsonSerializerSettings
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 Converters = new JsonConverter[]
@@ -40,7 +40,7 @@ namespace MvcDemos.Helpers
                 StringEscapeHandling = StringEscapeHandling.EscapeHtml
             };
 
-            return MvcHtmlString.Create(JsonConvert.SerializeObject(obj, settings));
+            return MvcHtmlString.Create(JsonConvert.SerializeObject(obj, serializerSettings));
         }
     }
 }
