@@ -363,10 +363,10 @@
     <Content Include="app\app.module.js" />
     <Content Include="app\app.route.js" />
     <Content Include="app\reservation\reservationClientSide.html" />
-    <Content Include="app\reservation\reservationServerSideOnly.html" />
     <Content Include="app\reservation\reservation.html" />
     <Content Include="app\reservation\reservation.dataservice.js" />
     <Content Include="app\reservation\reservation.controller.js" />
+    <Content Include="app\reservation\reservationServerSideOnly.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\TestClient.css" />
     <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
@@ -379,6 +379,7 @@
     <Content Include="DI\Unity\ReadMe.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Features\Validation\jquery.validate.custom.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />

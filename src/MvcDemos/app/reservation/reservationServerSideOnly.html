@@ -1,0 +1,24 @@
+﻿<div>
+    <form name="reservationForm" novalidate
+          ng-submit="vm.submit(reservationForm.$valid)">
+        <div>
+            <h1>{{vm.title}}</h1>
+            {{vm.validateServerSideOnly}}
+            <input disabled type="checkbox" name="validateServerSideOnly" value="" ng-model="vm.validateServerSideOnly">validateServerSideOnly</input>
+            <div class="field name-field">
+                <input class="input" type="text" name="name" placeholder="First Name + Last Name"
+                       ng-model="vm.reservation.firstName"
+                       ng-model-options="{ updateOn: 'blur' }" />
+            </div>
+            <div class="editor-field">
+                <input name="Date" class="text-box single-line" id="Date" type="date">
+                <span class="field-validation-valid" data-valmsg-replace="true" data-valmsg-for="Date">
+                </span>
+            </div>
+
+            <nav class="form-actions">
+                <input type="submit" value="Submit" class="button primary" />
+            </nav>
+        </div>
+    </form>
+</div>
