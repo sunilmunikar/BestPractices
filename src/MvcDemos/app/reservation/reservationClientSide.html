@@ -1,0 +1,18 @@
+﻿<h1>{{vm.title}}</h1>
+<form name="reservationForm" novalidate
+      ng-submit="vm.submit(reservationForm.$valid)">
+    <div class="form-group">
+        <label for="name">First Name + Last Name</label>
+        <input class="form-control" type="text" name="name" placeholder="First Name + Last Name"
+               required
+               ng-model="vm.reservation.name"
+               ng-model-options="{ updateOn: 'blur' }" />
+        <div ng-if="reservationForm.name.$touched" ng-messages="reservationForm.name.$error" class="errors">
+            <div ng-message="required">You did not enter your name</div>
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
