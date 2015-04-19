@@ -29,8 +29,10 @@
                         <li><a href="#">Link</a></li>-->
 
                         <li class="active"><a href="#/reservation">Validation <span class="sr-only">(current)</span></a></li>
+                        <li>
+                            <a href="/" ui-sref="search"> search [Directive] </a>
+                        </li>
                         <li><a href="/">Go to app</a></li>
-
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -46,15 +48,12 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
 
         <div ui-view></div>
-
     </div>
 </body>
-
 </html>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>

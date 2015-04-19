@@ -367,6 +367,7 @@
     <Content Include="app\reservation\reservation.dataservice.js" />
     <Content Include="app\reservation\reservation.controller.js" />
     <Content Include="app\reservation\reservationServerSideOnly.html" />
+    <Content Include="app\search.html" />
     <Content Include="app\searchbox.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\TestClient.css" />

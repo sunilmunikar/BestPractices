@@ -23,8 +23,15 @@
                 //,
                 //controller: 'Reservation',
                 //controllerAs: 'vm'
+            })
+            .state('search', {
+                url: '/search',
+                templateUrl: 'app/search.html'
+                //,
+                //controller: 'Reservation',
+                //controllerAs: 'vm'
             });
 
         $urlRouterProvider.otherwise('/');
-    })
+    });
 })();
