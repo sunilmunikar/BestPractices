@@ -29,6 +29,7 @@
                         <li><a href="#">Link</a></li>-->
 
                         <li class="active"><a href="#/reservation">Validation <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#/products">Products</a></li>
                         <li><a href="/">Go to app</a></li>
 
 
@@ -63,14 +64,19 @@
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-messages/angular-messages.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
 
 <script src="app/app.module.js"></script>
-
 <script src="app/app.route.js"></script>
 
 <script src="app/reservation/reservation.controller.js"></script>
 <script src="app/reservation/reservation.dataservice.js"></script>
+
 <script src="app/searchbox.js"></script>
+
+<!-- $httpbackend -->
+<script src="app/products/productListCtrl.js"></script>
+<script src="app/products/productResourceMock.js"></script>
 
 <!-- MVC will render a javascript file-->
 <script src="setting/settings"></script>

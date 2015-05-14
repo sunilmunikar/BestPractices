@@ -3,21 +3,21 @@ var browserSync = require('browser-sync');
 
 
 // Static server
-gulp.task('browser-sync', function () {
-    browserSync({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+// gulp.task('browser-sync', function () {
+    // browserSync({
+        // server: {
+            // baseDir: "./"
+        // }
+    // });
+// });
 
 // or...
 
-//gulp.task('browser-sync', function () {
-//    browserSync({
-//        proxy: "yourlocal.dev"
-//    });
-//});
+gulp.task('browser-sync', function () {
+   browserSync({
+       proxy: "http://localhost:56205/"
+   });
+});
 
 
 // use default task to launch BrowserSync and watch JS files
