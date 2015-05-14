@@ -2,14 +2,13 @@
     'use strict';
 
     angular.module('app', [
-        // Angular modules 
+        // Angular modules
         'ngMessages',
-        'ui.router'
+        'ui.router',
 
-        // Custom modules 
-
+        // Custom modules
         // 3rd Party Modules
-
+        'ngMockE2E'
     ]);
 
 })();
