@@ -33,6 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		bower.json = bower.json
+		gulp.config.js = gulp.config.js
+		gulpfile.js = gulpfile.js
+		package.json = package.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.Framework.Web", "My.Framework.Web\My.Framework.Web.csproj", "{9D764377-4DDC-41FA-B85E-E0591700692A}"
@@ -44,6 +47,48 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiDemos", "src\WebApiDemos\WebApiDemos.csproj", "{7D292EF5-57E3-407D-A1DD-AE77D62C5572}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{6C558904-D14A-4722-BC4D-6D6CC6D95744}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "server", "http://localhost:59597", "{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59597"
+		Debug.AspNetCompiler.PhysicalPath = "src\server\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59597\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59597"
+		Release.AspNetCompiler.PhysicalPath = "src\server\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59597\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "src\server\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client", "http://localhost:59618", "{D5A64D1B-5998-44B2-A619-055FB31E45DC}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59586"
+		Debug.AspNetCompiler.PhysicalPath = "src\client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59586\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59586"
+		Release.AspNetCompiler.PhysicalPath = "src\client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59586\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "src\client\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +144,14 @@ Global
 		{7D292EF5-57E3-407D-A1DD-AE77D62C5572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D292EF5-57E3-407D-A1DD-AE77D62C5572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D292EF5-57E3-407D-A1DD-AE77D62C5572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D5A64D1B-5998-44B2-A619-055FB31E45DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A64D1B-5998-44B2-A619-055FB31E45DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A64D1B-5998-44B2-A619-055FB31E45DC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A64D1B-5998-44B2-A619-055FB31E45DC}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +162,8 @@ Global
 		{9951DAAE-3F8D-4134-972E-EF20C7728CD4} = {D9265313-B202-4602-B36C-F77F60D8839D}
 		{5D7330F9-5A5D-4D4F-904D-1D5281C6E477} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
 		{7D292EF5-57E3-407D-A1DD-AE77D62C5572} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
+		{D1A5B12A-C7C3-4DC0-B5C3-6380DF600B06} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
+		{D5A64D1B-5998-44B2-A619-055FB31E45DC} = {6C558904-D14A-4722-BC4D-6D6CC6D95744}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35

@@ -34,7 +34,6 @@ bower_components/
 node_modules/
 src/MvcDemos/bower_components/
 src/MvcDemos/node_modules/
->>>>>>> origin/Dev
 
 #Ignore packages directory
 Packages/
