@@ -19,7 +19,6 @@
                     //controllerAs: 'vm'
                 })
 
-<<<<<<< HEAD
             .state('reservation.ServerSideOnly', {
                 url: '/ServerSideOnly',
                 templateUrl: 'app/reservation/reservationServerSideOnly.html'
@@ -33,18 +32,7 @@
                 //,
                 //controller: 'Reservation',
                 //controllerAs: 'vm'
-            });
-
-        $urlRouterProvider.otherwise('/');
-    });
-=======
-                .state('reservation.ServerSideOnly', {
-                    url: '/ServerSideOnly',
-                    templateUrl: 'app/reservation/reservationServerSideOnly.html'
-                    //,
-                    //controller: 'Reservation',
-                    //controllerAs: 'vm'
-                })
+            })
                 .state('products', {
                     url: '/products',
                     templateUrl: 'app/products/productListView.html',
@@ -53,8 +41,5 @@
                 });
 
             $urlRouterProvider.otherwise('/');
-
-        })
-
->>>>>>> origin/Dev
+        });
 })();

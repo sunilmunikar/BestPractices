@@ -32,8 +32,6 @@ _ReSharper*/
 
 bower_components/
 node_modules/
-<<<<<<< HEAD
-=======
 src/MvcDemos/bower_components/
 src/MvcDemos/node_modules/
 >>>>>>> origin/Dev
