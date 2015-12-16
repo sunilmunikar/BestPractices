@@ -13,5 +13,7 @@ namespace WebApiDemos
 
         [MaxLength(6)]
         public string League { get; set; }
+
+        public DateTime StartDate { get; set; }
     }
 }

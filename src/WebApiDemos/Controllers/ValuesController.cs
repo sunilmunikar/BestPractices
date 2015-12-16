@@ -1,6 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace WebApiDemos.Controllers
@@ -13,19 +18,58 @@ namespace WebApiDemos.Controllers
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var result = new User
+            {
+                Age = 34,
+                Birthdate = DateTime.Now,
+                ConvertedUsingAttribute = DateTime.Now,
+                Firstname = "Ugo",
+                Lastname = "Lattanzi",
+                IgnoreProperty = "This text should not appear in the reponse",
+                Salary = 1000,
+                Username = "imperugo",
+                Website = new Uri("http://www.tostring.it")
+            };
+
+            return Ok(result);
         }
 
         // GET api/values/5
-        public string Get(int? id)
+        public HttpResponseMessage Get(int? id)
         {
             if (id == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
 
-            return string.Empty;
+            var result = new User
+                {
+                    Age = 34,
+                    Birthdate = DateTime.Now,
+                    ConvertedUsingAttribute = DateTime.Now,
+                    Firstname = "Ugo",
+                    Lastname = "Lattanzi",
+                    IgnoreProperty = "This text should not appear in the reponse",
+                    Salary = 1000,
+                    Username = "imperugo",
+                    Website = new Uri("http://www.tostring.it")
+                };
+
+            var formatter = new JsonMediaTypeFormatter();
+            var json = formatter.SerializerSettings;
+
+            json.DateFormatHandling = Newtonsoft.Json.DateFormatHandling.IsoDateFormat;
+            json.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.Utc;
+            json.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+            json.Formatting = Newtonsoft.Json.Formatting.Indented;
+            json.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            json.Culture = new CultureInfo("en-US");
+
+            return Request.CreateResponse(HttpStatusCode.OK, result, formatter);
+
+
         }
+
 
         // POST api/values
         public void Post(Team value)
@@ -33,7 +77,7 @@ namespace WebApiDemos.Controllers
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Team value)
         {
         }
 
@@ -42,4 +86,14 @@ namespace WebApiDemos.Controllers
         {
         }
     }
+
+    //public class CustomDateTimeConverter : IsoDateTimeConverter
+    //{
+    //    public CustomDateTimeConverter()
+    //    {
+    //        base.DateTimeFormat = "dd/MM/yyyy";
+    //    }
+    //}
+
+
 }

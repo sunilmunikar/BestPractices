@@ -110,7 +110,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SecurityGuard">
       <HintPath>..\..\packages\SecurityGuard.MVC4.1.0.10\lib\net40\SecurityGuard.dll</HintPath>
@@ -362,11 +362,16 @@
     <Content Include="app\AjaxForm\mockAjax.js" />
     <Content Include="app\app.module.js" />
     <Content Include="app\app.route.js" />
+    <Content Include="app\products\productListCtrl.js" />
+    <Content Include="app\products\productListView.html" />
+    <Content Include="app\products\productResourceMock.js" />
     <Content Include="app\reservation\reservationClientSide.html" />
     <Content Include="app\reservation\reservation.html" />
     <Content Include="app\reservation\reservation.dataservice.js" />
     <Content Include="app\reservation\reservation.controller.js" />
     <Content Include="app\reservation\reservationServerSideOnly.html" />
+    <Content Include="app\search.html" />
+    <Content Include="app\searchbox.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\TestClient.css" />
     <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
