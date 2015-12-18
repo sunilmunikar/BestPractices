@@ -21,7 +21,7 @@
                     <date-range after="vm.after" duration="vm.duration" before="" before-is-readonly="false"> </date-range>
                 </div>
             </div>
-            <div>
+            <div class="row">
                 <label>Single select:&nbsp;</label>
                 <button class="btn btn-default" type="button" bs-select ng-model="selectedIcon" bs-options="icon.value as icon.label for icon in vm.icons" data-html="1">
                     Action <span class="caret"></span>
@@ -39,6 +39,13 @@
                     Action <span class="caret"></span>
                 </button>
             </div>
-        </div>
+            <div class="row">
+                <input type="text" name="myDecimal" placeholder="Decimal" ng-model="vm.aFloatValue" *step="0.01" * />
+                <input type="text" ng-model="vm.aFloatValue" ui-number-mask>
+                <input type="text" name="field" ng-model="vm.aFloatValue" ui-money-mask>
+                <div class="clear">
+                    {{vm.aFloatValue}}
+                </div>
+            </div>
     </section>
 </section>

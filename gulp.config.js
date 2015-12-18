@@ -1,6 +1,7 @@
 module.exports = function() {
     var client = './src/client/';
     var server = './src/server/';
+    var thirdPartyLibrary = client + 'lib/';
     var clientApp = client + 'app/';
     var report = './report/';
     var root = './';
@@ -34,6 +35,7 @@ module.exports = function() {
         index: client + 'index.html',
         // app js, with no specs
         js: [
+            thirdPartyLibrary + '**/*',
             clientApp + '**/*.module.js',
             clientApp + '**/*.js',
             '!' + clientApp + '**/*.spec.js'
