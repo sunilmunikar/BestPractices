@@ -1,0 +1,42 @@
+﻿<div class="row">
+
+    <div class="col-md-5 form-group">
+        <label>From</label>
+        <div class="input-group">
+            <input type="text" class="form-control"
+                   datepicker-popup="dd/MM/yyyy"
+                   ng-model="after"
+                   is-open="isAfterOpen"
+                   close-text="Close" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openAfter($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    <div class="col-md-2 form-group">
+        <label>Duration</label>
+        <div class="input-group">
+            <input type="number" class="form-control" name="duration" ng-model="duration" />
+        </div>
+    </div>
+
+    <div class="col-md-5 form-group">
+        <label>To</label>
+        <span ng-show="{{beforeIsReadonly}}">{{before | date : 'dd/MM/yyyy'}}</span>
+        <!--Note that the exclamation mark comes before the curly braces. -->
+        <div class="input-group" ng-show="!{{beforeIsReadonly}}">
+            <input type="text" class="form-control"
+                   datepicker-popup="dd/MM/yyyy"
+                   ng-model="before"
+                   is-open="isBeforeOpen" />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="openBefore($event)">
+                    <i class="glyphicon glyphicon-calendar"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>

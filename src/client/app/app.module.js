@@ -6,7 +6,7 @@
         'app.widgets',
         'app.admin',
         'app.dashboard',
+        'app.demo',
         'app.layout'
     ]);
-
 })();
