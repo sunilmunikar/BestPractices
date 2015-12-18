@@ -1,11 +1,43 @@
+<style>
+    [bs-select] {
+        /*position: relative;*/
+        overflow: hidden;
+        text-align: left;
+    }
+
+    .select.dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+        /*width: 90%;*/
+    }
+</style>
+
 <section id="demo-view" class="mainbar">
     <section class="matter">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <pre>vm : {{vm | json}}</pre>
+                    <!--<pre>vm : {{vm | json}}</pre>-->
                     <date-range after="vm.after" duration="vm.duration" before="" before-is-readonly="false"> </date-range>
                 </div>
+            </div>
+            <div>
+                <label>Single select:&nbsp;</label>
+                <button class="btn btn-default" type="button" bs-select ng-model="selectedIcon" bs-options="icon.value as icon.label for icon in vm.icons" data-html="1">
+                    Action <span class="caret"></span>
+                </button>
+                <hr>
+                <label>Multiple select:&nbsp;</label>
+                <button class="btn btn-default" type="button" bs-select
+                        data-animation="am-flip-x"
+                        ng-model="selectedIcons"
+                        bs-options="icon.value as icon.label for icon in vm.icons"
+                        data-html="1"
+                        data-multiple="1"
+                        data-max-length="1"
+                        data-all-none-buttons="true">
+                    Action <span class="caret"></span>
+                </button>
             </div>
         </div>
     </section>
